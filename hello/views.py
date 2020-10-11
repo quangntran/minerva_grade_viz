@@ -4,6 +4,7 @@ from django.http import HttpResponse
 
 from .models import Greeting
 import requests
+from django.core.files.storage import FileSystemStorage
 # Create your views here.
 def index(request):
     # r = requests.get('http://httpbin.org/status/418')
@@ -29,3 +30,11 @@ def db(request):
 
     greetings = Greeting.objects.all()
     return render(request, "db.html", {"greetings": greetings})
+
+def upload(request):
+    if request.method == "POST":
+        uploaded_file = request.FILES['document']
+        fs = FileSystemStorage()
+        fs.save(uploaded_file.name, uploaded_file)
+        
+    return render(request, 'upload.html')

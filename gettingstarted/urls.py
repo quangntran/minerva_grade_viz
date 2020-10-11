@@ -2,6 +2,9 @@ from django.urls import path, include
 
 from django.contrib import admin
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 admin.autodiscover()
 
 import hello.views
@@ -19,4 +22,8 @@ urlpatterns = [
     path("db/", hello.views.db, name="db"),
     path("admin/", admin.site.urls),
     path("view_teapot/", hello.views.view_teapot, name="view_teapot"),
+    path("upload/", hello.views.upload, name="upload"),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

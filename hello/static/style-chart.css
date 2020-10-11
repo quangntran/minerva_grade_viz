@@ -1,0 +1,62 @@
+/*div{
+  margin: auto;
+    width: 75%;
+}*/
+
+ul {
+  text-align: center;
+  margin-right: 9%;
+}
+
+.reduce>ul>li {
+  display: inline-block;
+/*  width: 25%;*/
+    width: 300px;
+/*    height: 500px*/
+}
+
+@media screen and (max-width: 600px) {
+  .reduce>ul>li {
+    width: 45% !important;
+  }
+}
+/* change gridMap height to change the height of individual graph*/
+.gridMap {
+  float: left;
+  border: 1px solid;
+  height: 300px;
+  width: 100%;
+  margin: 1px;
+}
+
+@media screen and (max-width: 600px) {
+  .gridMap {
+    width: 80% !important;
+  }
+}
+
+.reduce {
+  width: 100%;
+  height: 600px;
+  border: 0;
+  /*transform: scale(0.75);*/
+  transform-origin: 0 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+
+p {
+  text-align: center;
+}
+
+.reduce {
+  width: 100%;
+  height: 600px;
+  border: 0;
+  /*transform: scale(0.75);*/
+  transform-origin: 0 2;
+}

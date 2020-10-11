@@ -3,12 +3,112 @@
       <title>Highcharts Tutorial</title>
       <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
       </script>
-      <script src = "https://code.highcharts.com/highcharts.js"></script>  
+      <script src = "https://code.highcharts.com/highcharts.js"></script> 
+           {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style-chart.css' %}">
+
    </head>
    
    <body>
-      <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
-      <script language = "JavaScript">
+       <div class="reduce">
+           <ul>
+               <li>
+                   <div class="gridMap" id = "container3" ></div>
+                   <script language = "JavaScript">
+         $(document).ready(function() {  
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Historic World Population by Region'   
+            };
+            var subtitle = {
+               text: 'Source: Wikipedia.org'  
+            };
+            var xAxis = {
+               categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+               title: {
+                  text: 'Population (millions)',
+                  align: 'high'
+               },
+               labels: {
+                  overflow: 'justify'
+               },
+                plotLines: [{
+        color: 'red',
+        width: 2,
+        value: 120,
+        zIndex: 5
+    }]
+            };
+            var tooltip = {
+               valueSuffix: ' millions'
+            };
+            var plotOptions = {
+               bar: {
+                  dataLabels: {
+                     enabled: true
+                  }
+               }
+            };
+            var legend = {
+               layout: 'vertical',
+               align: 'right',
+               verticalAlign: 'top',
+               x: -40,
+               y: 100,
+               floating: true,
+               borderWidth: 1,
+               
+               backgroundColor: (
+                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+                     '#FFFFFF'),
+               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+                   data: {{ data|safe }},
+                   showInLegend: false
+               }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container3').highcharts(json);
+         });
+      </script>    
+               </li>
+               <li>
+                   <div class="gridMap" id = "container" ></div>
+                   <script language = "JavaScript">
          $(document).ready(function() {  
             var chart = {
                type: 'bar'
@@ -97,7 +197,109 @@
             json.credits = credits;
             $('#container').highcharts(json);
          });
-      </script>
+      </script>    
+               </li>
+               
+               <li>
+                   <div class="gridMap" id = "container2" ></div>
+                   <script language = "JavaScript">
+         $(document).ready(function() {  
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Historic World Population by Region'   
+            };
+            var subtitle = {
+               text: 'Source: Wikipedia.org'  
+            };
+            var xAxis = {
+               categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+               title: {
+                  text: 'Population (millions)',
+                  align: 'high'
+               },
+               labels: {
+                  overflow: 'justify'
+               },
+                plotLines: [{
+        color: 'red',
+        width: 2,
+        value: 120,
+        zIndex: 5
+    }]
+            };
+            var tooltip = {
+               valueSuffix: ' millions'
+            };
+            var plotOptions = {
+               bar: {
+                  dataLabels: {
+                     enabled: true
+                  }
+               }
+            };
+            var legend = {
+               layout: 'vertical',
+               align: 'right',
+               verticalAlign: 'top',
+               x: -40,
+               y: 100,
+               floating: true,
+               borderWidth: 1,
+               
+               backgroundColor: (
+                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+                     '#FFFFFF'),
+               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+                   data: {{ data|safe }},
+                   showInLegend: false
+               }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container2').highcharts(json);
+         });
+      </script>    
+                   
+                   
+                   
+               </li>
+               
+           </ul>
+       </div>
+       
    </body>
    
 </html>
