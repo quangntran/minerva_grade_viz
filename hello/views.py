@@ -97,7 +97,5 @@ def upload(request):
 #        series = str(series).replace("'mark', ", "Date.UTC")
         series = process_df(df)
         return render(request, 'view_chart.html', {'data': series})
-    
-
-        
+         
     return render(request, 'upload.html')

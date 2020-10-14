@@ -9,6 +9,7 @@ ASSIGNMENT_TITLES =  ["Elevator simulation",
                         'Final project proposal',
                         "Final project"]
 ASSIGNMENT_WEIGHTS = [2, 6, 6, 0, 10]
+DEFAULT_LO_TO_DISPLAY_IN_EVOLUTION = ['networkanalysis', 'networkmodeling']
 
 def process_df(df):
     # replace space in header with "_"
@@ -42,60 +43,81 @@ def process_df(df):
     list_of_students = df['Student_Name'].unique()
     num_students = len(list_of_students)
     i = 0
-    student_name = list_of_students[i]
-    student_df = df[df['Student_Name'] == student_name]
-    # group by LO
-    col_name_to_group_by = 'LO'
-    def split_date_func(df):
-        # truncate the Updated Date column so that it contains only the date information
-        df['Updated_Date'] = df['Updated_Date'].str.slice(stop=10)
+    series_list = []
+    for i in range(num_students):
+        student_name = list_of_students[i]
+        student_df = df[df['Student_Name'] == student_name]
+        # group by LO
+        col_name_to_group_by = 'LO'
+        def split_date_func(df):
+            # truncate the Updated Date column so that it contains only the date information
+            df['Updated_Date'] = df['Updated_Date'].str.slice(stop=10)
 
-        # convert to DateTime
-        df['Updated_Date']= pd.to_datetime(df['Updated_Date'])
-    #     print(df[['Updated_Date','LO']])
-        df = df.sort_values(by=['Updated_Date'])
-    #     print(df[['Updated_Date','LO']])
-        print('-'*10)
-    #     print(df['Updated_Date'])
-        # summarize the grouped Updated_Date into new columns: 'sum_weighted' and 'tot_weights'
-        df = df.groupby('Updated_Date').apply(lambda x: pd.DataFrame({'sum_weighted': x['weighted_score'].sum(), 
-                                                                 'tot_weights': x['weight'].sum()},
-                                                                index=['Updated_Date'])).reset_index()
-        df = df.drop(['level_1'], axis=1)
-    #     print(df)
-        ###### By this point we have a dataframe with:
-          # * date
-          # * total weighted scores
-          # * total weights
-          # What we want to do is taking the running average up to a certain date
-          # For date #2, it equals: 
-          # A/B where
-          # A is (total weighted scores of date 1 + total weighted scores of date 2)
-          # and B is (total weights of date1 + total weights of date 2)
+            # convert to DateTime
+            df['Updated_Date']= pd.to_datetime(df['Updated_Date'])
+        #     print(df[['Updated_Date','LO']])
+            df = df.sort_values(by=['Updated_Date'])
+        #     print(df[['Updated_Date','LO']])
+            print('-'*10)
+        #     print(df['Updated_Date'])
+            # summarize the grouped Updated_Date into new columns: 'sum_weighted' and 'tot_weights'
+            df = df.groupby('Updated_Date').apply(lambda x: pd.DataFrame({'sum_weighted': x['weighted_score'].sum(), 
+                                                                     'tot_weights': x['weight'].sum()},
+                                                                    index=['Updated_Date'])).reset_index()
+            df = df.drop(['level_1'], axis=1)
+        #     print(df)
+            ###### By this point we have a dataframe with:
+              # * date
+              # * total weighted scores
+              # * total weights
+              # What we want to do is taking the running average up to a certain date
+              # For date #2, it equals: 
+              # A/B where
+              # A is (total weighted scores of date 1 + total weighted scores of date 2)
+              # and B is (total weights of date1 + total weights of date 2)
 
-          ## Idea: we can create 
-          # * a new column (B) that is the cumsum of the vector column total weights
-          # * a new column (A) that is the cumsum of the total weighted scores
-          # * the quantity of interest would be A/B
-        df['B'] = df['tot_weights'].cumsum(axis=0)
-        df['A'] = df['sum_weighted'].cumsum(axis=0)
-        df['running_avg'] = df['A'] / df['B']
-#        print(df)
-        return df
+              ## Idea: we can create 
+              # * a new column (B) that is the cumsum of the vector column total weights
+              # * a new column (A) that is the cumsum of the total weighted scores
+              # * the quantity of interest would be A/B
+            df['B'] = df['tot_weights'].cumsum(axis=0)
+            df['A'] = df['sum_weighted'].cumsum(axis=0)
+            df['running_avg'] = df['A'] / df['B']
+    #        print(df)
+            return df
 
-    data_with_avg_LO = student_df.groupby(col_name_to_group_by).apply(func=split_date_func)
-    # map LO to CO
-    data_with_avg_LO.reset_index(inplace=True)
-    data_with_avg_LO['CO'] = data_with_avg_LO.apply(lambda row: map_CO(row, LO_IN_ORDER, CO_IN_ORDER), axis=1)
-    agg = {LO: [] for LO in data_with_avg_LO['LO'].unique()}
-    for index, row in data_with_avg_LO.iterrows():
-        time_info = (row['Updated_Date'].year, row['Updated_Date'].month-1, row['Updated_Date'].day)
-        agg[row['LO']].append(['mark',time_info, row['running_avg']])
-    series = []    
-    for k, v in agg.items():
-        series.append({'name':k, 
-                       'data': v})
-    series = str(series).replace("'mark', ", "Date.UTC")
-    return series
+        data_with_avg_LO = student_df.groupby(col_name_to_group_by).apply(func=split_date_func)
+        # map LO to CO
+        data_with_avg_LO.reset_index(inplace=True)
+        data_with_avg_LO['CO'] = data_with_avg_LO.apply(lambda row: map_CO(row, LO_IN_ORDER, CO_IN_ORDER), axis=1)
+#        agg = {LO: [] for LO in data_with_avg_LO['LO'].unique()}
+#        for index, row in data_with_avg_LO.iterrows():
+#            time_info = (row['Updated_Date'].year, row['Updated_Date'].month-1, row['Updated_Date'].day)
+#            agg[row['LO']].append(['mark',time_info, row['running_avg']])
+#        series = []    
+#        for k, v in agg.items():
+#            series.append({'name':k, 
+#                           'data': v})
+#        series = str(series).replace("'mark', ", "Date.UTC")
+#        series_list.append({'student_name': student_name, 'series': series})
+        agg = {LO: {'visible': False, 'content': []} for LO in data_with_avg_LO['LO'].unique()}
+        for index, row in data_with_avg_LO.iterrows():
+            time_info = (row['Updated_Date'].year, row['Updated_Date'].month-1, row['Updated_Date'].day)
+            if row['LO'] in DEFAULT_LO_TO_DISPLAY_IN_EVOLUTION:
+                visible = True
+            else:
+                visible = False
+            agg[row['LO']]['visible'] = visible
+            agg[row['LO']]['content'].append(['mark',time_info, row['running_avg']])
+        series = []    
+        for k, v in agg.items():
+            series.append({'name':k, 
+                           'data': v['content'],
+                           'visible': v['visible']})
+        series = str(series).replace("'mark', ", "Date.UTC")
+        series = series.replace("True", 'true')
+        series = series.replace("False", 'false')
+        series_list.append({'student_name': student_name, 'series': series})
+    return series_list
 
     
