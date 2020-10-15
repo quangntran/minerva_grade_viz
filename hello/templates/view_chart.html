@@ -4,14 +4,458 @@
       <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
       </script>
       <script src = "https://code.highcharts.com/highcharts.js"></script>  
+       <script src="http://code.highcharts.com/modules/exporting.js"></script>
+        <script src="http://code.highcharts.com/highcharts-more.js"></script>
+       <script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
          {% load static %}
        <link rel="stylesheet" type="text/css" href="{% static 'style-chart.css' %}">
+       <link rel="stylesheet" type="text/css" href="{% static 'style-tab.css' %}">
    </head>
    
    <body>
+       <div class="tab">
+           <button class="tablinks" onclick="openCity(event, 'LO_evolution')">LO Evolution</button>
+           <button class="tablinks" onclick="openCity(event, 'LO_average')">LO Average</button>
+           <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+       </div>
+       <script language = "Javascript">
+           function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+               </script>
+       
+<div id="LO_average" class="tabcontent">
+  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+      <script language = "JavaScript">
+        $(document).ready(function() {  
+            var chart = {
+               type: 'bar',
+                zoomType: 'xy'
+            };
+            var title = {
+               text: 'Range of LO averages for all students'
+            };
+            var subtitle = {
+//               text: 'Source: Wikipedia.org'  
+            };
+            var xAxis = {
+               categories: {{ whole_class_lo_data.LO|safe }},
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+                max:5,
+               title: {
+                  text: null,
+//                  align: 'high'
+               },
+//               labels: {
+//                  overflow: 'justify'
+//               }
+            };
+            var tooltip = {
+                          shared: true
+                          };
+//             
+           
+            var plotOptions = {
+               bar: {
+                  dataLabels: {
+                     enabled: true
+                  }
+               }
+            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+                  name: 'Mean',
+                   type: 'spline',
+                          lineWidth: '0px',
+                          marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                          fillColor: 'black',
+                        radius: 3,
+                        states: {
+                            hover: {
+                                enabled: true,
+                                lineWidth: 0
+                            }
+                        }
+                    },
+                   color: 'white',
+                   showInLegend: false,
+                   data: {{ whole_class_lo_data.mean|safe }},
+                    tooltip: {
+            pointFormat: '<span style="font-weight: bold">{series.name}</span>: {point.y:.2f}<br/> '
+        }
+                
+                   
+                    
+               },
+                {
+                          name: 'Range',
+                          type: 'errorbar',
+                    data: {{ whole_class_lo_data.range|safe }},
+                    
+                    
+                          tooltip: {
+            pointFormat: '<b>Range:</b> {point.low:.2f}-{point.high:.2f}'
+        }
+                }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container').highcharts(json);
+         });
+      </script>
+    
+    <div class="reduce">
+           <ul>
+               <li>
+                   <div class="gridMap" id = "container2" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() {  
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Historic World Population by Region'   
+            };
+            var subtitle = {
+               text: 'Source: Wikipedia.org'  
+            };
+            var xAxis = {
+               categories: {{ lo_list|safe }},
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+               title: {
+                  text: 'Population (millions)',
+                  align: 'high'
+               },
+               labels: {
+                  overflow: 'justify'
+               },
+                plotLines: [{
+        color: 'red',
+        width: 2,
+        value: 120,
+        zIndex: 5
+    }]
+            };
+            var tooltip = {
+               valueSuffix: ' millions'
+            };
+            var plotOptions = {
+               bar: {
+                  dataLabels: {
+                     enabled: true
+                  }
+               }
+            };
+            var legend = {
+               layout: 'vertical',
+               align: 'right',
+               verticalAlign: 'top',
+               x: -40,
+               y: 100,
+               floating: true,
+               borderWidth: 1,
+               
+               backgroundColor: (
+                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+                     '#FFFFFF'),
+               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   showInLegend: false
+               }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container2').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               <li>
+                   <div class="gridMap" id = "container3" ></div>
+                   <script language = "JavaScript">
+        
+         $(document).ready(function() {  
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Historic World Population by Region'   
+            };
+            var subtitle = {
+               text: 'Source: Wikipedia.org'  
+            };
+            var xAxis = {
+               categories: {{ lo_list|safe }},
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+               title: {
+                  text: 'Population (millions)',
+                  align: 'high'
+               },
+               labels: {
+                  overflow: 'justify'
+               },
+                plotLines: [{
+        color: 'red',
+        width: 2,
+        value: 120,
+        zIndex: 5
+    }]
+            };
+            var tooltip = {
+               valueSuffix: ' millions'
+            };
+            var plotOptions = {
+               bar: {
+                  dataLabels: {
+                     enabled: true
+                  }
+               }
+            };
+            var legend = {
+               layout: 'vertical',
+               align: 'right',
+               verticalAlign: 'top',
+               x: -40,
+               y: 100,
+               floating: true,
+               borderWidth: 1,
+               
+               backgroundColor: (
+                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+                     '#FFFFFF'),
+               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   showInLegend: false
+               }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container3').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               <li>
+                   <div class="gridMap" id = "container4" ></div>
+                   <script language = "JavaScript">
+                       
+         $(document).ready(function() {  
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Historic World Population by Region'   
+            };
+            var subtitle = {
+               text: 'Source: Wikipedia.org'  
+            };
+            var xAxis = {
+               categories: {{ lo_list|safe }},
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+               title: {
+                  text: 'Population (millions)',
+                  align: 'high'
+               },
+               labels: {
+                  overflow: 'justify'
+               },
+                plotLines: [{
+        color: 'red',
+        width: 2,
+        value: 120,
+        zIndex: 5
+    }]
+            };
+            var tooltip = {
+               valueSuffix: ' millions'
+            };
+            var plotOptions = {
+               bar: {
+                  dataLabels: {
+                     enabled: true
+                  }
+               }
+            };
+            var legend = {
+               layout: 'vertical',
+               align: 'right',
+               verticalAlign: 'top',
+               x: -40,
+               y: 100,
+               floating: true,
+               borderWidth: 1,
+               
+               backgroundColor: (
+                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+                     '#FFFFFF'),
+               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   showInLegend: false
+               }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container4').highcharts(json);
+         });
+      
+      </script>    
+                   
+                   
+                   
+               </li>
+               
+           </ul>
+       </div>
+</div>
+       
+       <div id="LO_evolution" class="tabcontent">
        <div class="reduce">
            <ul>
-           {% for student in data %}
+           {% for student in lo_evolution_data %}
                <li>
       <div class = "GridMap" id = "container{{ student.student_name }}" ></div>
       <script language = "JavaScript">
@@ -52,6 +496,9 @@
                }
             };
              var series = {{ student.series|safe }};
+                           var credits = {
+               enabled: false
+            };
 
             
             var json = {};
@@ -63,12 +510,14 @@
             json.yAxis = yAxis;  
             json.series = series;
             json.plotOptions = plotOptions;
+            json.credits = credits;
             $('#container{{ student.student_name }}').highcharts(json);
          });
       </script>
                </li>
            {% endfor %}
            </ul>
+       </div>
        </div>
    </body>
    

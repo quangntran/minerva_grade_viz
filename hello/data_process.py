@@ -43,12 +43,16 @@ def process_df(df):
     list_of_students = df['Student_Name'].unique()
     num_students = len(list_of_students)
     i = 0
-    series_list = []
+    lo_evolution_data = []
+    intermediate_whole_class_lo_data = {LO: [] for LO in df['LO'].unique()}
+    # data for plotting LO averages
+    LO_avg_data = []
     for i in range(num_students):
         student_name = list_of_students[i]
         student_df = df[df['Student_Name'] == student_name]
         # group by LO
         col_name_to_group_by = 'LO'
+
         def split_date_func(df):
             # truncate the Updated Date column so that it contains only the date information
             df['Updated_Date'] = df['Updated_Date'].str.slice(stop=10)
@@ -58,7 +62,7 @@ def process_df(df):
         #     print(df[['Updated_Date','LO']])
             df = df.sort_values(by=['Updated_Date'])
         #     print(df[['Updated_Date','LO']])
-            print('-'*10)
+    #         print('-'*10)
         #     print(df['Updated_Date'])
             # summarize the grouped Updated_Date into new columns: 'sum_weighted' and 'tot_weights'
             df = df.groupby('Updated_Date').apply(lambda x: pd.DataFrame({'sum_weighted': x['weighted_score'].sum(), 
@@ -90,16 +94,6 @@ def process_df(df):
         # map LO to CO
         data_with_avg_LO.reset_index(inplace=True)
         data_with_avg_LO['CO'] = data_with_avg_LO.apply(lambda row: map_CO(row, LO_IN_ORDER, CO_IN_ORDER), axis=1)
-#        agg = {LO: [] for LO in data_with_avg_LO['LO'].unique()}
-#        for index, row in data_with_avg_LO.iterrows():
-#            time_info = (row['Updated_Date'].year, row['Updated_Date'].month-1, row['Updated_Date'].day)
-#            agg[row['LO']].append(['mark',time_info, row['running_avg']])
-#        series = []    
-#        for k, v in agg.items():
-#            series.append({'name':k, 
-#                           'data': v})
-#        series = str(series).replace("'mark', ", "Date.UTC")
-#        series_list.append({'student_name': student_name, 'series': series})
         agg = {LO: {'visible': False, 'content': []} for LO in data_with_avg_LO['LO'].unique()}
         for index, row in data_with_avg_LO.iterrows():
             time_info = (row['Updated_Date'].year, row['Updated_Date'].month-1, row['Updated_Date'].day)
@@ -109,15 +103,42 @@ def process_df(df):
                 visible = False
             agg[row['LO']]['visible'] = visible
             agg[row['LO']]['content'].append(['mark',time_info, row['running_avg']])
+
         series = []    
         for k, v in agg.items():
             series.append({'name':k, 
                            'data': v['content'],
                            'visible': v['visible']})
+            intermediate_whole_class_lo_data[k].append(v['content'][-1][-1])
+        LO_avg_this_student = {}
+        LO_avg_this_student['student_name'] = student_name
+        LO_avg_this_student['LO'] = []
+        LO_avg_this_student['LO_avg'] = []
+        for LO in series:
+            LO_avg_this_student['LO'].append(LO['name'])
+            LO_avg_this_student['LO_avg'].append(LO['data'][-1][-1])
+        LO_avg_data.append(LO_avg_this_student)
+
         series = str(series).replace("'mark', ", "Date.UTC")
         series = series.replace("True", 'true')
         series = series.replace("False", 'false')
-        series_list.append({'student_name': student_name, 'series': series})
-    return series_list
+        # add this student's data to data for plotting LO evolution
+        lo_evolution_data.append({'student_name': student_name, 'series': series})
+    # print(lo_evolution_data)
+    # compute summary stats for LO averages for the whole class
+    whole_class_lo_data = {'LO': [], 'mean': [], 'range':[]} 
+    # print(len(intermediate_whole_class_lo_data['pythonimplementation']))
+    for k, v in intermediate_whole_class_lo_data.items():
+        whole_class_lo_data['LO'].append(k)
+        # compute mean
+        mean = np.mean(v)
+        whole_class_lo_data['mean'].append(mean)
+        # compute range
+        min_val = np.min(v)
+        max_val = np.max(v)
+        whole_class_lo_data['range'].append([min_val, max_val])
+
+
+    return lo_evolution_data, whole_class_lo_data, LO_avg_data
 
     

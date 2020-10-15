@@ -29,7 +29,8 @@ def view_teapot(request):
                        {'y':635},
                        {'y':203, 'color':'green'},
                        {'y':2}
-                   ]}
+                   ],
+              'LO_list': ['lo1', 'lo2', 'lo3', 'lo4', 'lo5']}
     return render(request, "chart.html", context)
     
 def db(request):
@@ -95,7 +96,9 @@ def upload(request):
 #            series.append({'name':k, 
 #                           'data': v})
 #        series = str(series).replace("'mark', ", "Date.UTC")
-        series = process_df(df)
-        return render(request, 'view_chart.html', {'data': series})
+        lo_evolution_data, whole_class_lo_data, LO_avg_data = process_df(df)
+        return render(request, 'view_chart.html', {'lo_evolution_data': lo_evolution_data,
+                                                   'whole_class_lo_data': whole_class_lo_data,
+                                                   'LO_avg_data': LO_avg_data})
          
     return render(request, 'upload.html')
