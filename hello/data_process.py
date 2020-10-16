@@ -47,48 +47,50 @@ def process_df(df):
     intermediate_whole_class_lo_data = {LO: [] for LO in df['LO'].unique()}
     # data for plotting LO averages
     LO_avg_data = []
+
+    def split_date_func(df):
+        # truncate the Updated Date column so that it contains only the date information
+        df['Updated_Date'] = df['Updated_Date'].str.slice(stop=10)
+
+        # convert to DateTime
+        df['Updated_Date']= pd.to_datetime(df['Updated_Date'])
+    #     print(df[['Updated_Date','LO']])
+        df = df.sort_values(by=['Updated_Date'])
+    #     print(df[['Updated_Date','LO']])
+    #         print('-'*10)
+    #     print(df['Updated_Date'])
+        # summarize the grouped Updated_Date into new columns: 'sum_weighted' and 'tot_weights'
+        df = df.groupby('Updated_Date').apply(lambda x: pd.DataFrame({'sum_weighted': x['weighted_score'].sum(), 
+                                                                 'tot_weights': x['weight'].sum()},
+                                                                index=['Updated_Date'])).reset_index()
+        df = df.drop(['level_1'], axis=1)
+    #     print(df)
+        ###### By this point we have a dataframe with:
+          # * date
+          # * total weighted scores
+          # * total weights
+          # What we want to do is taking the running average up to a certain date
+          # For date #2, it equals: 
+          # A/B where
+          # A is (total weighted scores of date 1 + total weighted scores of date 2)
+          # and B is (total weights of date1 + total weights of date 2)
+
+          ## Idea: we can create 
+          # * a new column (B) that is the cumsum of the vector column total weights
+          # * a new column (A) that is the cumsum of the total weighted scores
+          # * the quantity of interest would be A/B
+        df['B'] = df['tot_weights'].cumsum(axis=0)
+        df['A'] = df['sum_weighted'].cumsum(axis=0)
+        df['running_avg'] = df['A'] / df['B']
+    #        print(df)
+        return df
+
+
     for i in range(num_students):
         student_name = list_of_students[i]
         student_df = df[df['Student_Name'] == student_name]
         # group by LO
         col_name_to_group_by = 'LO'
-
-        def split_date_func(df):
-            # truncate the Updated Date column so that it contains only the date information
-            df['Updated_Date'] = df['Updated_Date'].str.slice(stop=10)
-
-            # convert to DateTime
-            df['Updated_Date']= pd.to_datetime(df['Updated_Date'])
-        #     print(df[['Updated_Date','LO']])
-            df = df.sort_values(by=['Updated_Date'])
-        #     print(df[['Updated_Date','LO']])
-    #         print('-'*10)
-        #     print(df['Updated_Date'])
-            # summarize the grouped Updated_Date into new columns: 'sum_weighted' and 'tot_weights'
-            df = df.groupby('Updated_Date').apply(lambda x: pd.DataFrame({'sum_weighted': x['weighted_score'].sum(), 
-                                                                     'tot_weights': x['weight'].sum()},
-                                                                    index=['Updated_Date'])).reset_index()
-            df = df.drop(['level_1'], axis=1)
-        #     print(df)
-            ###### By this point we have a dataframe with:
-              # * date
-              # * total weighted scores
-              # * total weights
-              # What we want to do is taking the running average up to a certain date
-              # For date #2, it equals: 
-              # A/B where
-              # A is (total weighted scores of date 1 + total weighted scores of date 2)
-              # and B is (total weights of date1 + total weights of date 2)
-
-              ## Idea: we can create 
-              # * a new column (B) that is the cumsum of the vector column total weights
-              # * a new column (A) that is the cumsum of the total weighted scores
-              # * the quantity of interest would be A/B
-            df['B'] = df['tot_weights'].cumsum(axis=0)
-            df['A'] = df['sum_weighted'].cumsum(axis=0)
-            df['running_avg'] = df['A'] / df['B']
-    #        print(df)
-            return df
 
         data_with_avg_LO = student_df.groupby(col_name_to_group_by).apply(func=split_date_func)
         # map LO to CO
@@ -154,6 +156,7 @@ def process_df(df):
         min_val = np.min(v)
         max_val = np.max(v)
         whole_class_lo_data['range'].append([min_val, max_val])
+
 
     return lo_evolution_data, whole_class_lo_data, LO_avg_data
 

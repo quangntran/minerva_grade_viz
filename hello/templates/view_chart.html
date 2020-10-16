@@ -166,6 +166,7 @@
                    <script language = "JavaScript">
          
          $(document).ready(function() {  
+            var plotLineId = 'meanPlotLine{{ student.student_name|safe }}';
             var chart = {
                type: 'bar'
             };
@@ -181,6 +182,14 @@
                   text: null
                }
             };
+//                           var plotLineOptions = {
+//        color: '#FF0000',
+//        id: plotLineId, 
+//        width: 2,
+//        value: 2.5,
+//        dashStyle: 'shortdash',
+//        zIndex: 5,
+//    };
             var yAxis = {
                min: 0,
                            max:5,
@@ -192,28 +201,30 @@
 ////                           text: 'Average course grade',
 //                  overflow: 'justify'
 //               },
-                plotLines: [{
-                           
-        name: 'Average course grade',
-        color: 'red',
-        width: 2,
-        value: 2.5,
-        zIndex: 5,
-        label: {
-                           text: 'Average course grade',
-                           }
-    }]
+//                plotLines: [{
+//        id: plotLineId,
+//        name: 'Average course grade',
+//        color: 'red',
+//        width: 2,
+//        value: 2.5,
+//        zIndex: 5,
+//        label: {
+//                           text: 'Average course grade',
+//                           }
+//                           plotLineOptions
+//    }]
             };
+                           
             var tooltip = {
 //               valueSuffix: ' millions'
             };
-            var plotOptions = {
-               bar: {
-                  dataLabels: {
-                     enabled: false
-                  }
-               }
-            };
+//            var plotOptions = {
+//               bar: {
+//                  dataLabels: {
+//                     enabled: false
+//                  }
+//               }
+//            };
             var legend = {
 //               layout: 'vertical',
 //               align: 'right',
@@ -244,8 +255,21 @@
 //                   ],
 //                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
                    data: {{ student.LO_avg|safe }},
-                   showInLegend: true
-               }
+                   showInLegend: false,
+               },
+                           {
+                           name: 'Course average',
+                           data: [2,3,4,3,2,4,1,4],
+                           type: 'line',
+                           zIndex: 10,
+                           color: "#A9A9A9",
+                           marker: {
+                           lineWidth: 3,
+                           radius: 0,
+                           lineColor: "#A9A9A9",
+                           }
+                           
+                           }
             ];
       
             var json = {};   
@@ -256,7 +280,7 @@
             json.xAxis = xAxis;
             json.yAxis = yAxis;  
             json.series = series;
-            json.plotOptions = plotOptions;
+//            json.plotOptions = plotOptions;
             json.legend = legend;
             json.credits = credits;
             $('#container_lo_avg{{ student.student_name|safe }}').highcharts(json);
