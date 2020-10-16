@@ -19,7 +19,7 @@
        <div class="tab">
            <button class="tablinks" onclick="openCity(event, 'LO_evolution')">LO Evolution</button>
            <button class="tablinks" onclick="openCity(event, 'LO_average')">LO Average</button>
-           <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+           <button class="tablinks" onclick="openCity(event, 'CO_average')">CO_average</button>
        </div>
        <script language = "Javascript">
            function openCity(evt, cityName) {
@@ -43,7 +43,110 @@
   evt.currentTarget.className += " active";
 }
                </script>
-       
+       <div id="CO_average" class="tabcontent">
+           <div class="reduce">
+           <ul>
+               {% for student in CO_avg_data %}
+               <li>
+                   <div class="gridMap" id = "container_co_avg{{ student.student_name|safe }}" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() {  
+            var plotLineId = 'meanPlotLine{{ student.student_name|safe }}';
+            var chart = {
+               type: 'bar',
+                height: 600
+            };
+            var title = {
+               text: 'Average CO Scores'   
+            };
+            var subtitle = {
+               text: 'for {{ student.student_name|safe }}'  
+            };
+            var xAxis = {
+               categories: {{ student.CO|safe }},
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+                           max:5,
+            };
+                           
+            var tooltip = {
+                           formatter: function () {
+            if (this.series.name == 'LO average'){
+                return this.x.concat(': ', parseFloat(this.point.y).toFixed(2))
+            } else {
+                return '<b>Course average: </b>'.concat(parseFloat(this.point.y).toFixed(2))
+            }
+             ;
+        }
+            };
+                           
+            var legend = {
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+                   name: 'LO average',
+                   data: {{ student.CO_avg|safe }},
+                   showInLegend: false,
+                           states: {
+            inactive: {
+                opacity: 1
+            }
+        },
+               },
+                           {
+                           name: 'Course average',
+                           data: {{ student.course_avg|safe }},
+                           type: 'line',
+                           zIndex: 10,
+                           color: "black",
+                           marker: {
+                           lineWidth: 3,
+                           radius: 0,
+                           lineColor: "black",
+                           },
+               
+                           states: {
+                                hover: {
+                                enabled: false
+                                },
+                           inactive: {
+                opacity: 1
+            }
+                                },
+                           
+                           
+                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_co_avg{{ student.student_name|safe }}').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               {% endfor %}
+               
+           </ul>
+       </div>
+       </div>
 <div id="LO_average" class="tabcontent">
   <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
       <script language = "JavaScript">

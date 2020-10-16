@@ -48,6 +48,19 @@ def process_df(df):
     # data for plotting LO averages
     LO_avg_data = []
 
+    def match_color(val):
+        # SET COLOR TO MATCH MINERVA SCHEME
+        if 0 < val and val < 2:
+            color = '#C83F31'
+        elif 2 <= val and val < 3:
+            color = '#DB883A'
+        elif 3 <= val and val < 4:
+            color = '#56A371'
+        elif 4 <= val and val < 5:
+            color = '#3473B6'
+        elif 5 <= val:
+            color = '#573F88'
+        return color
     def split_date_func(df):
         # truncate the Updated Date column so that it contains only the date information
         df['Updated_Date'] = df['Updated_Date'].str.slice(stop=10)
@@ -121,16 +134,7 @@ def process_df(df):
             LO_avg_this_student['LO'].append(LO['name'])
 
             # SET COLOR TO MATCH MINERVA SCHEME
-            if 0 < LO['data'][-1][-1] and LO['data'][-1][-1] < 2:
-                color = '#C83F31'
-            elif 2 <= LO['data'][-1][-1] and LO['data'][-1][-1] < 3:
-                color = '#DB883A'
-            elif 3 <= LO['data'][-1][-1] and LO['data'][-1][-1] < 4:
-                color = '#56A371'
-            elif 4 <= LO['data'][-1][-1] and LO['data'][-1][-1] < 5:
-                color = '#3473B6'
-            elif 5 <= LO['data'][-1][-1]:
-                color = '#573F88'
+            color = match_color(LO['data'][-1][-1])
             LO_avg_this_student['LO_avg'].append({'y': LO['data'][-1][-1],
                                                   'color': color})
     #         LO_avg_this_student['color'].append(color)
@@ -157,7 +161,35 @@ def process_df(df):
         max_val = np.max(v)
         whole_class_lo_data['range'].append([min_val, max_val])
 
+    
+    CO_avg_data = []
+    for i in range(num_students):
+        student_name = list_of_students[i]
+        student_df = df[df['Student_Name'] == student_name]
+        # group by CO
+        col_name_to_group_by = 'CO'
 
-    return lo_evolution_data, whole_class_lo_data, LO_avg_data
+        data_CO_evolution = student_df.groupby(col_name_to_group_by).apply(func=split_date_func)
+        data_CO_avg = data_CO_evolution.groupby(col_name_to_group_by).tail(1)
+        data_CO_avg.reset_index(inplace=True)
+    #     data_with_avg_CO.reset_index(inplace=True)
+    #     data_with_avg_LO['CO'] = data_with_avg_LO.apply(lambda row: map_CO(row, LO_IN_ORDER, CO_IN_ORDER), axis=1)
+    # data_with_avg_CO.head()
+
+        CO_avg_this_student = {}
+        CO_avg_this_student['student_name'] = student_name
+        CO_avg_this_student['CO'] = []
+        CO_avg_this_student['CO_avg'] = []
+        CO_avg_this_student['color'] = []
+        CO_avg_this_student['course_avg'] = [np.mean(data_CO_avg['running_avg'])]*data_CO_avg.shape[0]
+        for index, row in data_CO_avg.iterrows():
+            CO_avg_this_student['CO'].append(row['CO'])
+            # SET COLOR TO MATCH MINERVA SCHEME
+            color = match_color(row['running_avg'])
+            CO_avg_this_student['CO_avg'].append({'y': row['running_avg'],
+                                                  'color': color})
+        CO_avg_data.append(CO_avg_this_student)
+
+    return lo_evolution_data, whole_class_lo_data, LO_avg_data, CO_avg_data
 
     
