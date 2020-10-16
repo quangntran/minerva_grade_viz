@@ -160,8 +160,9 @@
     
     <div class="reduce">
            <ul>
+               {% for student in LO_avg_data %}
                <li>
-                   <div class="gridMap" id = "container2" ></div>
+                   <div class="gridMap" id = "container_lo_avg{{ student.student_name|safe }}" ></div>
                    <script language = "JavaScript">
          
          $(document).ready(function() {  
@@ -169,56 +170,63 @@
                type: 'bar'
             };
             var title = {
-               text: 'Historic World Population by Region'   
+               text: 'Average LO Scores'   
             };
             var subtitle = {
-               text: 'Source: Wikipedia.org'  
+               text: 'for {{ student.student_name|safe }}'  
             };
             var xAxis = {
-               categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+               categories: {{ student.LO|safe }},
                title: {
                   text: null
                }
             };
             var yAxis = {
                min: 0,
-               title: {
-                  text: 'Population (millions)',
-                  align: 'high'
-               },
-               labels: {
-                  overflow: 'justify'
-               },
+                           max:5,
+//               title: {
+//                  text: 'Population (millions)',
+//                  align: 'high'
+//               },
+//               labels: {
+////                           text: 'Average course grade',
+//                  overflow: 'justify'
+//               },
                 plotLines: [{
+                           
+        name: 'Average course grade',
         color: 'red',
         width: 2,
-        value: 120,
-        zIndex: 5
+        value: 2.5,
+        zIndex: 5,
+        label: {
+                           text: 'Average course grade',
+                           }
     }]
             };
             var tooltip = {
-               valueSuffix: ' millions'
+//               valueSuffix: ' millions'
             };
             var plotOptions = {
                bar: {
                   dataLabels: {
-                     enabled: true
+                     enabled: false
                   }
                }
             };
             var legend = {
-               layout: 'vertical',
-               align: 'right',
-               verticalAlign: 'top',
-               x: -40,
-               y: 100,
-               floating: true,
-               borderWidth: 1,
-               
-               backgroundColor: (
-                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
-                     '#FFFFFF'),
-               shadow: true
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
             };
             var credits = {
                enabled: false
@@ -234,8 +242,9 @@
 //                       {y:203, color:'green'},
 //                       {y:2}
 //                   ],
-                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
-                   showInLegend: false
+//                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   data: {{ student.LO_avg|safe }},
+                   showInLegend: true
                }
             ];
       
@@ -250,205 +259,12 @@
             json.plotOptions = plotOptions;
             json.legend = legend;
             json.credits = credits;
-            $('#container2').highcharts(json);
+            $('#container_lo_avg{{ student.student_name|safe }}').highcharts(json);
          });
       
       </script>    
                </li>
-               <li>
-                   <div class="gridMap" id = "container3" ></div>
-                   <script language = "JavaScript">
-        
-         $(document).ready(function() {  
-            var chart = {
-               type: 'bar'
-            };
-            var title = {
-               text: 'Historic World Population by Region'   
-            };
-            var subtitle = {
-               text: 'Source: Wikipedia.org'  
-            };
-            var xAxis = {
-               categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
-               title: {
-                  text: null
-               }
-            };
-            var yAxis = {
-               min: 0,
-               title: {
-                  text: 'Population (millions)',
-                  align: 'high'
-               },
-               labels: {
-                  overflow: 'justify'
-               },
-                plotLines: [{
-        color: 'red',
-        width: 2,
-        value: 120,
-        zIndex: 5
-    }]
-            };
-            var tooltip = {
-               valueSuffix: ' millions'
-            };
-            var plotOptions = {
-               bar: {
-                  dataLabels: {
-                     enabled: true
-                  }
-               }
-            };
-            var legend = {
-               layout: 'vertical',
-               align: 'right',
-               verticalAlign: 'top',
-               x: -40,
-               y: 100,
-               floating: true,
-               borderWidth: 1,
-               
-               backgroundColor: (
-                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
-                     '#FFFFFF'),
-               shadow: true
-            };
-            var credits = {
-               enabled: false
-            };
-            var series = [
-               {
-//                  name: 'Year 1800',
-//                  data: [107, 31, 635, 203, 2],
-//                   data: [
-//                       {y: 107, color:'red'},
-//                       {y:31, color:'red'},
-//                       {y:635},
-//                       {y:203, color:'green'},
-//                       {y:2}
-//                   ],
-                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
-                   showInLegend: false
-               }
-            ];
-      
-            var json = {};   
-            json.chart = chart; 
-            json.title = title;   
-            json.subtitle = subtitle; 
-            json.tooltip = tooltip;
-            json.xAxis = xAxis;
-            json.yAxis = yAxis;  
-            json.series = series;
-            json.plotOptions = plotOptions;
-            json.legend = legend;
-            json.credits = credits;
-            $('#container3').highcharts(json);
-         });
-      
-      </script>    
-               </li>
-               
-               <li>
-                   <div class="gridMap" id = "container4" ></div>
-                   <script language = "JavaScript">
-                       
-         $(document).ready(function() {  
-            var chart = {
-               type: 'bar'
-            };
-            var title = {
-               text: 'Historic World Population by Region'   
-            };
-            var subtitle = {
-               text: 'Source: Wikipedia.org'  
-            };
-            var xAxis = {
-               categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
-               title: {
-                  text: null
-               }
-            };
-            var yAxis = {
-               min: 0,
-               title: {
-                  text: 'Population (millions)',
-                  align: 'high'
-               },
-               labels: {
-                  overflow: 'justify'
-               },
-                plotLines: [{
-        color: 'red',
-        width: 2,
-        value: 120,
-        zIndex: 5
-    }]
-            };
-            var tooltip = {
-               valueSuffix: ' millions'
-            };
-            var plotOptions = {
-               bar: {
-                  dataLabels: {
-                     enabled: true
-                  }
-               }
-            };
-            var legend = {
-               layout: 'vertical',
-               align: 'right',
-               verticalAlign: 'top',
-               x: -40,
-               y: 100,
-               floating: true,
-               borderWidth: 1,
-               
-               backgroundColor: (
-                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
-                     '#FFFFFF'),
-               shadow: true
-            };
-            var credits = {
-               enabled: false
-            };
-            var series = [
-               {
-//                  name: 'Year 1800',
-//                  data: [107, 31, 635, 203, 2],
-//                   data: [
-//                       {y: 107, color:'red'},
-//                       {y:31, color:'red'},
-//                       {y:635},
-//                       {y:203, color:'green'},
-//                       {y:2}
-//                   ],
-                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
-                   showInLegend: false
-               }
-            ];
-      
-            var json = {};   
-            json.chart = chart; 
-            json.title = title;   
-            json.subtitle = subtitle; 
-            json.tooltip = tooltip;
-            json.xAxis = xAxis;
-            json.yAxis = yAxis;  
-            json.series = series;
-            json.plotOptions = plotOptions;
-            json.legend = legend;
-            json.credits = credits;
-            $('#container4').highcharts(json);
-         });
-      
-      </script>    
-                   
-                   
-                   
-               </li>
+               {% endfor %}
                
            </ul>
        </div>

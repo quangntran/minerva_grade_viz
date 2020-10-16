@@ -114,9 +114,26 @@ def process_df(df):
         LO_avg_this_student['student_name'] = student_name
         LO_avg_this_student['LO'] = []
         LO_avg_this_student['LO_avg'] = []
+        LO_avg_this_student['color'] = []
         for LO in series:
             LO_avg_this_student['LO'].append(LO['name'])
-            LO_avg_this_student['LO_avg'].append(LO['data'][-1][-1])
+
+            # SET COLOR TO MATCH MINERVA SCHEME
+            if 0 < LO['data'][-1][-1] and LO['data'][-1][-1] < 2:
+                color = '#C83F31'
+            elif 2 <= LO['data'][-1][-1] and LO['data'][-1][-1] < 3:
+                color = '#DB883A'
+            elif 3 <= LO['data'][-1][-1] and LO['data'][-1][-1] < 4:
+                color = '#56A371'
+            elif 4 <= LO['data'][-1][-1] and LO['data'][-1][-1] < 5:
+                color = '#3473B6'
+            elif 5 <= LO['data'][-1][-1]:
+                color = '#573F88'
+            LO_avg_this_student['LO_avg'].append({'y': LO['data'][-1][-1],
+                                                  'color': color})
+    #         LO_avg_this_student['color'].append(color)
+
+
         LO_avg_data.append(LO_avg_this_student)
 
         series = str(series).replace("'mark', ", "Date.UTC")
@@ -137,7 +154,6 @@ def process_df(df):
         min_val = np.min(v)
         max_val = np.max(v)
         whole_class_lo_data['range'].append([min_val, max_val])
-
 
     return lo_evolution_data, whole_class_lo_data, LO_avg_data
 
