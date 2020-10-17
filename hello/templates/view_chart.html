@@ -59,7 +59,7 @@
 //               text: 'Source: Wikipedia.org'  
             };
             var xAxis = {
-               categories: {{ whole_class_lo_contrib_data.LO|safe }},
+               categories: {{ contrib_summary_stat_data.LO|safe }},
                title: {
                   text: null
                }
@@ -123,7 +123,7 @@
                     },
                    color: 'white',
                    showInLegend: false,
-                   data: {{ whole_class_lo_contrib_data.mean|safe }},
+                   data: {{ contrib_summary_stat_data.mean|safe }},
                     tooltip: {
             pointFormat: '<span style="font-weight: bold">{series.name}</span>: {point.y:.2f}<br/> '
         }
@@ -134,7 +134,7 @@
                 {
                           name: 'Range',
                           type: 'errorbar',
-                    data: {{ whole_class_lo_contrib_data.range|safe }},
+                    data: {{ contrib_summary_stat_data.range|safe }},
                     
                     
                           tooltip: {
@@ -184,7 +184,7 @@
                text: 'for {{ student.student_name|safe }}'  
             };
             var xAxis = {
-               categories: {{ student.LO|safe }},
+               categories: {{ student.categories|safe }},
                title: {
                   text: null
                }
@@ -261,9 +261,9 @@
 //                       {y:2}
 //                   ],
 //                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
-                   data: {{ student.LO_avg|safe }},
+                   data: {{ student.data|safe }},
                    showInLegend: false,
-                           color: 'black'
+//                           color: 'black'
                },
 //                           {
 //                           name: 'Course average',
@@ -304,7 +304,7 @@
        <div id="CO_average" class="tabcontent">
            <div class="reduce">
            <ul>
-               {% for student in CO_avg_data %}
+               {% for student in CO_average_data %}
                <li>
                    <div class="gridMap" id = "container_co_avg{{ student.student_name|safe }}" ></div>
                    <script language = "JavaScript">
@@ -322,7 +322,7 @@
                text: 'for {{ student.student_name|safe }}'  
             };
             var xAxis = {
-               categories: {{ student.CO|safe }},
+               categories: {{ student.categories|safe }},
                title: {
                   text: null
                }
@@ -351,7 +351,7 @@
             var series = [
                {
                    name: 'LO average',
-                   data: {{ student.CO_avg|safe }},
+                   data: {{ student.data|safe }},
                    showInLegend: false,
                            states: {
             inactive: {
@@ -361,7 +361,7 @@
                },
                            {
                            name: 'Course average',
-                           data: {{ student.course_avg|safe }},
+                           data: {{ student.mean_of_avg|safe }},
                            type: 'line',
                            zIndex: 10,
                            color: "black",
@@ -420,7 +420,7 @@
 //               text: 'Source: Wikipedia.org'  
             };
             var xAxis = {
-               categories: {{ whole_class_lo_data.LO|safe }},
+               categories: {{ LO_summary_stat_data.LO|safe }},
                title: {
                   text: null
                }
@@ -484,7 +484,7 @@
                     },
                    color: 'white',
                    showInLegend: false,
-                   data: {{ whole_class_lo_data.mean|safe }},
+                   data: {{ LO_summary_stat_data.mean|safe }},
                     tooltip: {
             pointFormat: '<span style="font-weight: bold">{series.name}</span>: {point.y:.2f}<br/> '
         }
@@ -495,7 +495,7 @@
                 {
                           name: 'Range',
                           type: 'errorbar',
-                    data: {{ whole_class_lo_data.range|safe }},
+                    data: {{ LO_summary_stat_data.range|safe }},
                     
                     
                           tooltip: {
@@ -521,7 +521,7 @@
     
     <div class="reduce">
            <ul>
-               {% for student in LO_avg_data %}
+               {% for student in LO_average_data %}
                <li>
                    <div class="gridMap" id = "container_lo_avg{{ student.student_name|safe }}" ></div>
                    <script language = "JavaScript">
@@ -546,7 +546,7 @@
                text: 'for {{ student.student_name|safe }}'  
             };
             var xAxis = {
-               categories: {{ student.LO|safe }},
+               categories: {{ student.categories|safe }},
                title: {
                   text: null
                }
@@ -623,7 +623,7 @@
 //                       {y:2}
 //                   ],
 //                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
-                   data: {{ student.LO_avg|safe }},
+                   data: {{ student.data|safe }},
                    showInLegend: false,
                },
 //                           {
@@ -666,9 +666,9 @@
        <div id="LO_evolution" class="tabcontent">
        <div class="reduce">
            <ul>
-           {% for student in lo_evolution_data %}
+           {% for student in LO_evolution_data %}
                <li>
-      <div class = "GridMap" id = "container{{ student.student_name }}" ></div>
+      <div class = "GridMap" id = "container_lo_evo{{ student.student_name }}" ></div>
       <script language = "JavaScript">
          $(document).ready(function() {  
             var chart = {
@@ -683,10 +683,6 @@
             };
             var xAxis = {
                type: 'datetime',
-//               dateTimeLabelFormats: { // don't display the dummy year
-//                  month: '%e. %b',
-//                  year: '%b'
-//               },
                title: {
                   text: 'Date'
                }
@@ -722,7 +718,7 @@
             json.series = series;
             json.plotOptions = plotOptions;
             json.credits = credits;
-            $('#container{{ student.student_name }}').highcharts(json);
+            $('#container_lo_evo{{ student.student_name }}').highcharts(json);
          });
       </script>
                </li>
