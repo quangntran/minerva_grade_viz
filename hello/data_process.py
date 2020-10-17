@@ -92,9 +92,9 @@ def process_df(df):
           # * a new column (B) that is the cumsum of the vector column total weights
           # * a new column (A) that is the cumsum of the total weighted scores
           # * the quantity of interest would be A/B
-        df['B'] = df['tot_weights'].cumsum(axis=0)
-        df['A'] = df['sum_weighted'].cumsum(axis=0)
-        df['running_avg'] = df['A'] / df['B']
+        df['cumsum_tot_weights'] = df['tot_weights'].cumsum(axis=0)
+        df['cumsum_sum_weighted'] = df['sum_weighted'].cumsum(axis=0)
+        df['running_avg'] = df['cumsum_sum_weighted'] / df['cumsum_tot_weights']
     #        print(df)
         return df
 
@@ -189,7 +189,53 @@ def process_df(df):
             CO_avg_this_student['CO_avg'].append({'y': row['running_avg'],
                                                   'color': color})
         CO_avg_data.append(CO_avg_this_student)
+    
+    # LO contribution
+    intermediate_data_whole_class_LO_contrib = {LO: [] for LO in df['LO'].unique()}
+    LO_contrib_data = []
+    # print(intermediate_data_whole_class_LO_contrib)
+    for i in range(num_students):
+        student_name = list_of_students[i]
+        student_df = df[df['Student_Name'] == student_name]
+        # group by CO
+        col_name_to_group_by = 'CO'
+        data_with_avg_CO = student_df.groupby(col_name_to_group_by).apply(func=split_date_func)
+        data_with_avg_CO = data_with_avg_CO.groupby(col_name_to_group_by).tail(1)
+        data_with_avg_CO.reset_index(inplace=True)
+        num_CO = data_with_avg_CO.shape[0]
 
-    return lo_evolution_data, whole_class_lo_data, LO_avg_data, CO_avg_data
+        # group by LO
+        col_name_to_group_by = 'LO'
+        data_with_avg_LO = student_df.groupby(col_name_to_group_by).apply(func=split_date_func)
+        data_with_avg_LO = data_with_avg_LO.groupby(col_name_to_group_by).tail(1)
+        data_with_avg_LO.reset_index(inplace=True)
+        # map LO to CO
+        data_with_avg_LO['CO'] = data_with_avg_LO.apply(lambda row: map_CO(row, LO_IN_ORDER, CO_IN_ORDER), axis=1)
+
+        # lookup CO table from LO table
+        data_with_avg_LO = data_with_avg_LO.merge(data_with_avg_CO, on="CO")
+        data_with_avg_LO['LO_contrib'] = data_with_avg_LO['cumsum_sum_weighted_x']/data_with_avg_LO['cumsum_tot_weights_y']/num_CO/np.mean(data_with_avg_CO['running_avg'])
+        for k,v in data_with_avg_LO.iterrows():
+            intermediate_data_whole_class_LO_contrib[v['LO']].append(v['LO_contrib'])
+
+        LO_contrib_data_this_student = {}
+        LO_contrib_data_this_student['LO'] = list(data_with_avg_LO['LO'])
+        LO_contrib_data_this_student['LO_avg'] = list(data_with_avg_LO['LO_contrib'])
+        LO_contrib_data_this_student['student_name'] = student_name
+        LO_contrib_data.append(LO_contrib_data_this_student)
+
+    # compute summary stats for LO averages for the whole class
+    whole_class_lo_contrib_data = {'LO': [], 'mean': [], 'range':[]} 
+    for k, v in intermediate_data_whole_class_LO_contrib.items():
+        whole_class_lo_contrib_data['LO'].append(k)
+        # compute mean
+        mean = np.mean(v)
+        whole_class_lo_contrib_data['mean'].append(mean)
+        # compute range
+        min_val = np.min(v)
+        max_val = np.max(v)
+        whole_class_lo_contrib_data['range'].append([min_val, max_val])
+
+    return lo_evolution_data, whole_class_lo_data, LO_avg_data, CO_avg_data, whole_class_lo_contrib_data, LO_contrib_data
 
     

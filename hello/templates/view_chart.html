@@ -17,9 +17,10 @@
    
    <body>
        <div class="tab">
+           <button class="tablinks" onclick="openCity(event, 'LO_contribution')">LO Contribution</button>
            <button class="tablinks" onclick="openCity(event, 'LO_evolution')">LO Evolution</button>
            <button class="tablinks" onclick="openCity(event, 'LO_average')">LO Average</button>
-           <button class="tablinks" onclick="openCity(event, 'CO_average')">CO_average</button>
+           <button class="tablinks" onclick="openCity(event, 'CO_average')">CO Average</button>
        </div>
        <script language = "Javascript">
            function openCity(evt, cityName) {
@@ -43,6 +44,263 @@
   evt.currentTarget.className += " active";
 }
                </script>
+       <div id="LO_contribution" class="tabcontent">
+           <div id="container_LO_contrib" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+      <script language = "JavaScript">
+        $(document).ready(function() {  
+            var chart = {
+               type: 'bar',
+                zoomType: 'xy'
+            };
+            var title = {
+               text: 'Range of LO contribution for all students'
+            };
+            var subtitle = {
+//               text: 'Source: Wikipedia.org'  
+            };
+            var xAxis = {
+               categories: {{ whole_class_lo_contrib_data.LO|safe }},
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+                max:1,
+               title: {
+                  text: null,
+//                  align: 'high'
+               },
+//               labels: {
+//                  overflow: 'justify'
+//               }
+            };
+            var tooltip = {
+                          shared: true
+                          };
+//             
+           
+            var plotOptions = {
+               bar: {
+                  dataLabels: {
+                     enabled: true
+                  }
+               }
+            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+                  name: 'Mean',
+                   type: 'spline',
+                          lineWidth: '0px',
+                          marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                          fillColor: 'black',
+                        radius: 3,
+                        states: {
+                            hover: {
+                                enabled: true,
+                                lineWidth: 0
+                            }
+                        }
+                    },
+                   color: 'white',
+                   showInLegend: false,
+                   data: {{ whole_class_lo_contrib_data.mean|safe }},
+                    tooltip: {
+            pointFormat: '<span style="font-weight: bold">{series.name}</span>: {point.y:.2f}<br/> '
+        }
+                
+                   
+                    
+               },
+                {
+                          name: 'Range',
+                          type: 'errorbar',
+                    data: {{ whole_class_lo_contrib_data.range|safe }},
+                    
+                    
+                          tooltip: {
+            pointFormat: '<b>Range:</b> {point.low:.2f}-{point.high:.2f}'
+        }
+                }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_LO_contrib').highcharts(json);
+         });
+      </script>
+           <div class="reduce">
+           <ul>
+               {% for student in LO_contrib_data %}
+               <li>
+                   <div class="gridMap" id = "container_lo_contrib{{ student.student_name|safe }}" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+//             var dup = function(n, object){
+//                 var ret = [];
+//                for (var i = 0; i<n; i++)
+//                {
+//                    ret[i] = obj;
+//                }
+//                return (ret);
+//             }
+            var plotLineId = 'meanPlotLine{{ student.student_name|safe }}';
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Average LO Scores'   
+            };
+            var subtitle = {
+               text: 'for {{ student.student_name|safe }}'  
+            };
+            var xAxis = {
+               categories: {{ student.LO|safe }},
+               title: {
+                  text: null
+               }
+            };
+//                           var plotLineOptions = {
+//        color: '#FF0000',
+//        id: plotLineId, 
+//        width: 2,
+//        value: 2.5,
+//        dashStyle: 'shortdash',
+//        zIndex: 5,
+//    };
+            var yAxis = {
+               min: 0,
+                           max:1,
+//               title: {
+//                  text: 'Population (millions)',
+//                  align: 'high'
+//               },
+//               labels: {
+////                           text: 'Average course grade',
+//                  overflow: 'justify'
+//               },
+//                plotLines: [{
+//        id: plotLineId,
+//        name: 'Average course grade',
+//        color: 'red',
+//        width: 2,
+//        value: 2.5,
+//        zIndex: 5,
+//        label: {
+//                           text: 'Average course grade',
+//                           }
+//                           plotLineOptions
+//    }]
+            };
+                           
+            var tooltip = {
+//               valueSuffix: ' millions'
+            };
+//            var plotOptions = {
+//               bar: {
+//                  dataLabels: {
+//                     enabled: false
+//                  }
+//               }
+//            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+//                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   data: {{ student.LO_avg|safe }},
+                   showInLegend: false,
+                           color: 'black'
+               },
+//                           {
+//                           name: 'Course average',
+//                           data: [2,3,4,3,2,4,1,4],
+//                           type: 'line',
+//                           zIndex: 10,
+//                           color: "#A9A9A9",
+//                           marker: {
+//                           lineWidth: 3,
+//                           radius: 0,
+//                           lineColor: "#A9A9A9",
+//                           }
+//                           
+//                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_lo_contrib{{ student.student_name|safe }}').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               {% endfor %}
+               
+           </ul>
+       </div>
+       </div>
        <div id="CO_average" class="tabcontent">
            <div class="reduce">
            <ul>
@@ -51,7 +309,7 @@
                    <div class="gridMap" id = "container_co_avg{{ student.student_name|safe }}" ></div>
                    <script language = "JavaScript">
          
-         $(document).ready(function() {  
+         $(document).ready(function() { 
             var plotLineId = 'meanPlotLine{{ student.student_name|safe }}';
             var chart = {
                type: 'bar',
@@ -268,7 +526,15 @@
                    <div class="gridMap" id = "container_lo_avg{{ student.student_name|safe }}" ></div>
                    <script language = "JavaScript">
          
-         $(document).ready(function() {  
+         $(document).ready(function() { 
+//             var dup = function(n, object){
+//                 var ret = [];
+//                for (var i = 0; i<n; i++)
+//                {
+//                    ret[i] = obj;
+//                }
+//                return (ret);
+//             }
             var plotLineId = 'meanPlotLine{{ student.student_name|safe }}';
             var chart = {
                type: 'bar'
@@ -360,19 +626,19 @@
                    data: {{ student.LO_avg|safe }},
                    showInLegend: false,
                },
-                           {
-                           name: 'Course average',
-                           data: [2,3,4,3,2,4,1,4],
-                           type: 'line',
-                           zIndex: 10,
-                           color: "#A9A9A9",
-                           marker: {
-                           lineWidth: 3,
-                           radius: 0,
-                           lineColor: "#A9A9A9",
-                           }
-                           
-                           }
+//                           {
+//                           name: 'Course average',
+//                           data: [2,3,4,3,2,4,1,4],
+//                           type: 'line',
+//                           zIndex: 10,
+//                           color: "#A9A9A9",
+//                           marker: {
+//                           lineWidth: 3,
+//                           radius: 0,
+//                           lineColor: "#A9A9A9",
+//                           }
+//                           
+//                           }
             ];
       
             var json = {};   

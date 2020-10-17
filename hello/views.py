@@ -96,10 +96,12 @@ def upload(request):
 #            series.append({'name':k, 
 #                           'data': v})
 #        series = str(series).replace("'mark', ", "Date.UTC")
-        lo_evolution_data, whole_class_lo_data, LO_avg_data, CO_avg_data = process_df(df)
+        lo_evolution_data, whole_class_lo_data, LO_avg_data, CO_avg_data, whole_class_lo_contrib_data, LO_contrib_data = process_df(df)
         return render(request, 'view_chart.html', {'lo_evolution_data': lo_evolution_data,
                                                    'whole_class_lo_data': whole_class_lo_data,
                                                    'LO_avg_data': LO_avg_data,
-                                                   'CO_avg_data': CO_avg_data})
+                                                   'CO_avg_data': CO_avg_data,
+                                                   'whole_class_lo_contrib_data': whole_class_lo_contrib_data,
+                                                   'LO_contrib_data': LO_contrib_data})
          
     return render(request, 'upload.html')
