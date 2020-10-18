@@ -25,7 +25,10 @@ def index(request):
             CO_IN_ORDER = list(map(lambda x: x.strip(), form.cleaned_data['co_list'].split(','), ))
             ASSIGNMENT_TITLES = list(map(lambda x: x.strip(), form.cleaned_data['assignment_title'].split(','), ))
             ASSIGNMENT_WEIGHTS = list(map(lambda x: int(x.strip()), form.cleaned_data['assignment_weight'].split(','), ))
+            if form.cleaned_data['default_lo']=='':
+                form.cleaned_data['default_lo'] = form.cleaned_data['lo_list']
             DEFAULT_LO_TO_DISPLAY_IN_EVOLUTION = list(map(lambda x: x.strip(), form.cleaned_data['default_lo'].split(','), ))
+            print('HFSKDJHFDS', DEFAULT_LO_TO_DISPLAY_IN_EVOLUTION)
             params = {'LO_IN_ORDER': LO_IN_ORDER, 'CO_IN_ORDER': CO_IN_ORDER, 
                       'ASSIGNMENT_TITLES': ASSIGNMENT_TITLES, 'ASSIGNMENT_WEIGHTS': ASSIGNMENT_WEIGHTS, 'DEFAULT_LO_TO_DISPLAY_IN_EVOLUTION': DEFAULT_LO_TO_DISPLAY_IN_EVOLUTION, }
             df = pd.read_csv(io.StringIO(uploaded_file.read().decode('utf-8')), delimiter=',')
@@ -85,64 +88,15 @@ def upload(request):
             CO_IN_ORDER = list(map(lambda x: x.strip(), form.cleaned_data['co_list'].split(','), ))
             ASSIGNMENT_TITLES = list(map(lambda x: x.strip(), form.cleaned_data['assignment_title'].split(','), ))
             ASSIGNMENT_WEIGHTS = list(map(lambda x: int(x.strip()), form.cleaned_data['assignment_weight'].split(','), ))
+            if form.cleaned_data['default_lo']=='':
+                form.cleaned_data['default_lo'] = form.cleaned_data['lo_list']
             DEFAULT_LO_TO_DISPLAY_IN_EVOLUTION = list(map(lambda x: x.strip(), form.cleaned_data['default_lo'].split(','), ))
+            
             params = {'LO_IN_ORDER': LO_IN_ORDER, 'CO_IN_ORDER': CO_IN_ORDER, 
                       'ASSIGNMENT_TITLES': ASSIGNMENT_TITLES, 'ASSIGNMENT_WEIGHTS': ASSIGNMENT_WEIGHTS, 'DEFAULT_LO_TO_DISPLAY_IN_EVOLUTION': DEFAULT_LO_TO_DISPLAY_IN_EVOLUTION, }
-    #        fs = FileSystemStorage()
-    #        fs.save(uploaded_file.name, uploaded_file)
-            df = pd.read_csv(io.StringIO(uploaded_file.read().decode('utf-8')), delimiter=',')
-            
-    #        data_with_avg_LO = process_df(df)
-    #        def convert_timestamp(item_date_object):
-    #            if isinstance(item_date_object, (datetime.date, datetime.datetime)):
-    #                return item_date_object.timestamp()
-    #            
-    #        agg = {LO: [] for LO in data_with_avg_LO['LO'].unique()}
-    #        for index, row in data_with_avg_LO.iterrows():
-    #            agg[row['LO']].append([row['Updated_Date'], row['running_avg']])
-    #        series = []    
-    #        for k, v in agg.items():
-    #            series.append({'name':k, 
-    #                           'data': v})
-    #        context = series
-
-    #### works but with hours
-    #        agg = {LO: [] for LO in data_with_avg_LO['LO'].unique()}
-    #        for index, row in data_with_avg_LO.iterrows():
-    #            agg[row['LO']].append([row['Updated_Date'], row['running_avg']])
-    #        series = []    
-    #        for k, v in agg.items():
-    #            series.append({'name':k, 
-    #                           'data': v})
-    #        series = json.dumps(series, default=convert_timestamp)
-    ##########        
-    #        class DateTimeEncoder(JSONEncoder):
-    #                #Override the default method
-    #                def default(self, obj):
-    #                    if isinstance(obj, (datetime.date, datetime.datetime)):
-    #                        return obj.isoformat()
-    #
-    #        agg = {LO: [] for LO in data_with_avg_LO['LO'].unique()}
-    #        for index, row in data_with_avg_LO.iterrows():
-    #        #     time_info = [row['Updated_Date'].year, row['Updated_Date'].month, row['Updated_Date'].day]
-    #            agg[row['LO']].append([row['Updated_Date'], row['running_avg']])
-    #        series = []    
-    #        for k, v in agg.items():
-    #            series.append({'name':k, 
-    #                           'data': v})
-    #        # json.dumps(series)
-    #        series = json.dumps(series, indent=4, cls=DateTimeEncoder)
-    #        agg = {LO: [] for LO in data_with_avg_LO['LO'].unique()}
-    #        for index, row in data_with_avg_LO.iterrows():
-    #            time_info = (row['Updated_Date'].year, row['Updated_Date'].month-1, row['Updated_Date'].day)
-    #            agg[row['LO']].append(['mark',time_info, row['running_avg']])
-    #        series = []    
-    #        for k, v in agg.items():
-    #            series.append({'name':k, 
-    #                           'data': v})
-    #        series = str(series).replace("'mark', ", "Date.UTC")
             LO_evolution_data, LO_summary_stat_data, LO_average_data, CO_average_data, contrib_summary_stat_data, LO_contrib_data = process_df(df, params)
 #            print(contrib_summary_stat_data)
+            print('HFSKDFHLSDH ')
             return render(request, 'view_chart.html', {'LO_evolution_data': LO_evolution_data, 
                                                        'LO_summary_stat_data': LO_summary_stat_data, 
                                                        'LO_average_data': LO_average_data, 

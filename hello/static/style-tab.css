@@ -76,3 +76,7 @@ input[type="text"] {
     color: black;
     text-align: left;
 }
+
+.tab button.active {
+  background-color: #ccc;
+}
