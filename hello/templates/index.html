@@ -53,11 +53,33 @@
     <div id="use_tool" class="tabcontentdemo"  style="background-color:white;color:black">
         <form acion="/chart/" method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form.as_p }}
+            {% for field in form %}
+                <div class="field">
+                    
+                <label for="{{ field.label }}">{{ field.label_tag }}
+                    
+                {% if field.field.required %}<span class="special_class"></span>{% endif %}</label>
+                    <br>
+                {{ field }}
+                        
+                </div>
+            {% endfor %}
+            
+            
+<!--            {{ form.as_p }}-->
             <div class="submit-button">
                 <button style="text-align:center;margin: 0 auto;" type="submit">Submit</button>
             </div>
         </form>
+        <hr>
+        <div> 
+            <h3>Sample Inputs</h3>
+            <h5>Upload file</h5>
+            <p>The file is .csv data file downloaded from Forum and is assumed to follow specific schema. Click <a href="/media/synthetic_data.csv">here</a> to download a sample .csv file.</p>
+            
+            
+            
+        </div>
     </div>
 <!--    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-python"><span class="glyphicon glyphicon-flash"></span> Getting Started with Python</a>-->
 <!--    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/python-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>-->

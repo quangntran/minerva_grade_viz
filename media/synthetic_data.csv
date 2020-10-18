@@ -1,0 +1,431 @@
+,Student Name,Student ID,Course Title,Course Code,Class Title,Class Code,Assessment Type,Assignment Title,Group Assignment,Poll Title,Grader Name,Updated Date,Comment,Score,Learning Outcome Name,HC Name
+0,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-10 18:03:47+00:00,This is excellent work!,,,
+1,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-14 18:12:14+00:00,This is excellent work!,,,
+2,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-22 14:13:50+00:00,This is excellent work!,4.0,responsibility,
+3,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-10 14:27:00+00:00,This is excellent work!,4.0,,pythonimplementation
+4,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-15 14:18:24+00:00,This is excellent work!,,,
+5,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-26 14:28:14+00:00,This is excellent work!,4.0,,interpretresults
+6,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-24 14:16:15+00:00,This is excellent work!,,,
+7,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-17 14:16:23+00:00,This is excellent work!,,,
+8,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-07 14:17:30+00:00,This is excellent work!,4.0,professionalism,
+9,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-10 14:24:06+00:00,This is excellent work!,,,
+10,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-17 14:25:34+00:00,This is excellent work!,1.0,critique,
+11,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-15 14:28:21+00:00,This is excellent work!,2.0,modeling,
+12,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-02 14:28:35+00:00,This is excellent work!,5.0,,professionalism
+13,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-14 08:32:13+00:00,This is excellent work!,4.0,organization,
+14,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-29 17:08:19+00:00,This is excellent work!,,,
+15,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-18 08:37:22+00:00,This is excellent work!,,,
+16,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-16 08:40:45+00:00,This is excellent work!,,,
+17,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-22 08:27:22+00:00,This is excellent work!,,,
+18,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-25 08:36:22+00:00,This is excellent work!,,,
+19,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-18 08:47:51+00:00,This is excellent work!,4.0,,professionalism
+20,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-19 08:39:57+00:00,This is excellent work!,2.0,professionalism,
+21,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-05 08:43:44+00:00,This is excellent work!,,,
+22,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-18 14:33:10+00:00,This is excellent work!,2.0,,interpretresults
+23,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-28 08:47:28+00:00,This is excellent work!,,,
+24,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-10 08:49:09+00:00,This is excellent work!,4.0,,interpretresults
+25,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-11 08:58:22+00:00,This is excellent work!,,,
+26,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-03 09:34:07+00:00,This is excellent work!,,,
+27,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-27 09:35:17+00:00,This is excellent work!,4.0,,pythonimplementation
+28,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-19 09:35:23+00:00,This is excellent work!,3.0,,pythonimplementation
+29,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-04-04 14:15:16+00:00,This is excellent work!,3.0,,camodeling
+30,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-18 09:43:34+00:00,This is excellent work!,,,
+31,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-11 09:45:46+00:00,This is excellent work!,3.0,confidenceintervals,
+32,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-04-01 09:48:49+00:00,This is excellent work!,4.0,modeling,
+33,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-04 09:50:38+00:00,This is excellent work!,,,
+34,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-28 09:52:36+00:00,This is excellent work!,2.0,breakitdown,
+35,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-10 09:52:30+00:00,This is excellent work!,2.0,critique,
+36,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-24 09:54:59+00:00,This is excellent work!,4.0,dataviz,
+37,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-05 12:48:47+00:00,This is excellent work!,2.0,,professionalism
+38,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-20 10:13:41+00:00,This is excellent work!,,,
+39,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-30 10:20:58+00:00,This is excellent work!,3.0,professionalism,
+40,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-14 10:24:22+00:00,This is excellent work!,,,
+41,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-25 10:31:03+00:00,This is excellent work!,,,
+42,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-15 10:32:37+00:00,This is excellent work!,,,
+43,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-02 10:39:03+00:00,This is excellent work!,,,
+44,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-27 12:22:45+00:00,This is excellent work!,,,
+45,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-27 10:46:08+00:00,This is excellent work!,,,
+46,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-15 11:02:34+00:00,This is excellent work!,,,
+47,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-24 11:13:00+00:00,This is excellent work!,,,
+48,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-29 11:14:50+00:00,This is excellent work!,,,
+49,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-29 09:22:50+00:00,This is excellent work!,3.0,,networkmodeling
+50,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-27 12:22:33+00:00,This is excellent work!,2.0,,networkanalysis
+51,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-14 12:28:55+00:00,This is excellent work!,1.0,,networkmodeling
+52,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-21 12:31:37+00:00,This is excellent work!,,,
+53,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-02 13:05:22+00:00,This is excellent work!,1.0,dataviz,
+54,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-10 12:34:05+00:00,This is excellent work!,1.0,algorithms,
+55,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-11 09:24:50+00:00,This is excellent work!,4.0,,networkanalysis
+56,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-18 12:45:51+00:00,This is excellent work!,3.0,,pythonimplementation
+57,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-16 09:29:48+00:00,This is excellent work!,2.0,,pythonimplementation
+58,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-05 12:54:13+00:00,This is excellent work!,1.0,,interpretresults
+59,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-24 12:55:10+00:00,This is excellent work!,4.0,,interpretresults
+60,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-03 12:58:47+00:00,This is excellent work!,3.0,modeling,
+61,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-05 12:57:03+00:00,This is excellent work!,4.0,networks,
+62,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-07 13:02:44+00:00,This is excellent work!,1.0,organization,
+63,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-22 09:10:54+00:00,This is excellent work!,,,
+64,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-24 09:11:23+00:00,This is excellent work!,,,
+65,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-16 09:27:24+00:00,This is excellent work!,,,
+66,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Final project proposal,False,,Prof. Ben Affleck,2020-04-14 12:50:59+00:00,This is excellent work!,,,
+67,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 1.1 - Course overview,1.1,poll,,,Prep poll C,Prof. Ben Affleck,2020-02-08 16:56:46+00:00,This is excellent work!,5.0,,pythonimplementation
+68,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 1.2 - Simulation project,1.2,poll,,,Poll A,Prof. Ben Affleck,2020-02-18 11:43:02+00:00,This is excellent work!,3.0,variables,
+69,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.1 - Introduction to cellular automata,2.1,poll,,,Reflection poll,Prof. Ben Affleck,2020-02-05 18:29:23+00:00,This is excellent work!,5.0,,camodeling
+70,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.1 - Introduction to cellular automata,2.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-12 07:49:11+00:00,This is excellent work!,,,
+71,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.2 - Simulating cellular automata,2.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-04 14:05:48+00:00,This is excellent work!,4.0,,pythonimplementation
+72,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 3.1 - Mean-field approximation,3.1,video,,,,Prof. Ben Affleck,2020-02-07 21:40:11+00:00,This is excellent work!,5.0,,caanalysis
+73,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 3.1 - Mean-field approximation,3.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-20 12:54:13+00:00,This is excellent work!,,,
+74,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 3.2 - Percolation and renormalization,3.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-08 09:28:54+00:00,This is excellent work!,2.0,,caanalysis
+75,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 4.1 - Case study: Traffic flow 1,4.1,poll,,,Reflection Poll,Prof. Ben Affleck,2020-02-27 12:16:36+00:00,This is excellent work!,4.0,,camodeling
+76,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 4.1 - Case study: Traffic flow 1,4.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-29 02:21:09+00:00,This is excellent work!,,,
+77,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 4.2 - Case study: Traffic flow 2,4.2,video,,,,Prof. Ben Affleck,2020-02-20 16:39:18+00:00,This is excellent work!,4.0,,camodeling
+78,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 5.2 - Introduction to networks,5.2,poll,,,Reflection Poll,Prof. Ben Affleck,2020-03-01 16:25:19+00:00,This is excellent work!,3.0,,networkmodeling
+79,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 6.2 - Dynamics on networks,6.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-17 13:36:25+00:00,This is excellent work!,2.0,,interpretresults
+80,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 7.2 - Adaptive networks,7.2,poll,,,Poll A,Prof. Ben Affleck,2020-03-24 20:48:09+00:00,This is excellent work!,4.0,,networkmodeling
+81,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.1 - Network metrics and percolation,8.1,poll,,,Poll A,Prof. Ben Affleck,2020-04-09 13:16:55+00:00,This is excellent work!,4.0,,networkanalysis
+82,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.1 - Network metrics and percolation,8.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-29 10:41:34+00:00,This is excellent work!,,,
+83,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.2 - PageRank in citation networks,8.2,poll,,,Reflection Poll,Prof. Ben Affleck,2020-03-22 07:54:20+00:00,This is excellent work!,5.0,,interpretresults
+84,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.2 - PageRank in citation networks,8.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-31 03:29:13+00:00,This is excellent work!,,,
+85,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 9.1 - Mean field approximation,9.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-31 18:48:34+00:00,This is excellent work!,3.0,,pythonimplementation
+86,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 9.2 - Networks unit synthesis,9.2,video,,,,Prof. Ben Affleck,2020-03-24 16:20:11+00:00,This is excellent work!,5.0,,networkmodeling
+87,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 10.1 - Simulations with random numbers,10.1,poll,,,Reflection Poll,Prof. Ben Affleck,2020-04-05 18:03:43+00:00,This is excellent work!,3.0,,mcmodeling
+88,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 10.2 - Random numbers from simulations,10.2,poll,,,Reflection poll,Prof. Ben Affleck,2020-04-09 18:03:04+00:00,This is excellent work!,5.0,,interpretresults
+89,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 12.1 - The Ising model 1,12.1,video,,,,Prof. Ben Affleck,2020-04-14 09:32:11+00:00,This is excellent work!,2.0,,mcmodeling
+90,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 12.2 - The Metropolis-Hastings method,12.2,poll,,,Poll A,Prof. Ben Affleck,2020-04-30 16:29:09+00:00,This is excellent work!,4.0,,mcmodeling
+91,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 13.1 - The Ising model 2,13.1,video,,,,Prof. Ben Affleck,2020-04-26 20:07:36+00:00,This is excellent work!,4.0,,mcmodeling
+92,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 13.2 - Random walks in finance,13.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-04-30 09:29:49+00:00,This is excellent work!,4.0,,mcmodeling
+93,Student_1,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 14.2 - MCMC methods for parameter estimation,14.2,poll,,,Poll A,Prof. Ben Affleck,2020-05-15 04:39:37+00:00,This is excellent work!,4.0,,mcmodeling
+94,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-11 18:04:04+00:00,This is excellent work!,,,
+95,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-03 18:12:08+00:00,This is excellent work!,,,
+96,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-19 15:20:52+00:00,This is excellent work!,3.0,responsibility,
+97,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-22 15:24:45+00:00,This is excellent work!,4.0,,professionalism
+98,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-13 15:23:53+00:00,This is excellent work!,5.0,,interpretresults
+99,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-23 15:25:21+00:00,This is excellent work!,4.0,,pythonimplementation
+100,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-03-01 15:21:39+00:00,This is excellent work!,3.0,professionalism,
+101,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-05 15:22:13+00:00,This is excellent work!,,,
+102,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-25 15:25:47+00:00,This is excellent work!,3.0,modeling,
+103,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-25 13:23:12+00:00,This is excellent work!,3.0,confidenceintervals,
+104,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-17 14:12:39+00:00,This is excellent work!,,,
+105,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-26 09:35:36+00:00,This is excellent work!,1.0,,pythonimplementation
+106,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-11 14:23:07+00:00,This is excellent work!,4.0,,pythonimplementation
+107,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-07 14:24:34+00:00,This is excellent work!,3.0,,camodeling
+108,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-24 14:39:21+00:00,This is excellent work!,5.0,,professionalism
+109,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-21 14:28:55+00:00,This is excellent work!,2.0,professionalism,
+110,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-08 14:34:17+00:00,This is excellent work!,3.0,,interpretresults
+111,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-21 14:35:58+00:00,This is excellent work!,1.0,,interpretresults
+112,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-17 14:38:46+00:00,This is excellent work!,3.0,modeling,
+113,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-21 15:08:04+00:00,This is excellent work!,4.0,,professionalism
+114,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-27 11:52:19+00:00,This is excellent work!,4.0,professionalism,
+115,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-03 21:44:12+00:00,This is excellent work!,,,
+116,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-25 21:51:35+00:00,This is excellent work!,,,
+117,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-24 21:53:55+00:00,This is excellent work!,,,
+118,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-30 21:54:16+00:00,This is excellent work!,,,
+119,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-25 21:57:27+00:00,This is excellent work!,,,
+120,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-20 15:18:00+00:00,This is excellent work!,3.0,,networkmodeling
+121,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-23 15:07:46+00:00,This is excellent work!,,,
+122,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-08 15:16:06+00:00,This is excellent work!,3.0,,networkanalysis
+123,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-04 15:21:50+00:00,This is excellent work!,2.0,,networkmodeling
+124,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-28 15:22:30+00:00,This is excellent work!,1.0,,networkanalysis
+125,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-01 20:54:27+00:00,This is excellent work!,1.0,,pythonimplementation
+126,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-04 15:28:50+00:00,This is excellent work!,2.0,,pythonimplementation
+127,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-25 15:31:13+00:00,This is excellent work!,2.0,,interpretresults
+128,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-23 15:32:16+00:00,This is excellent work!,5.0,,interpretresults
+129,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-12 18:33:47+00:00,This is excellent work!,3.0,modeling,
+130,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-05 15:40:57+00:00,This is excellent work!,2.0,networks,
+131,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-23 15:43:23+00:00,This is excellent work!,2.0,organization,
+132,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Final project proposal,False,,Prof. Ben Affleck,2020-04-21 12:51:07+00:00,This is excellent work!,,,
+133,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 1.1 - Course overview,1.1,poll,,,Prep poll C,Prof. Ben Affleck,2020-02-11 16:57:38+00:00,This is excellent work!,3.0,,pythonimplementation
+134,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 1.2 - Simulation project,1.2,poll,,,Poll A,Prof. Ben Affleck,2020-02-14 11:44:25+00:00,This is excellent work!,2.0,variables,
+135,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.1 - Introduction to cellular automata,2.1,poll,,,Reflection poll,Prof. Ben Affleck,2020-02-22 18:30:18+00:00,This is excellent work!,2.0,,camodeling
+136,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.1 - Introduction to cellular automata,2.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-05 08:09:01+00:00,This is excellent work!,,,
+137,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.2 - Simulating cellular automata,2.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-06 12:45:21+00:00,This is excellent work!,1.0,,pythonimplementation
+138,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 3.2 - Percolation and renormalization,3.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-14 09:31:09+00:00,This is excellent work!,2.0,,caanalysis
+139,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 4.1 - Case study: Traffic flow 1,4.1,poll,,,Reflection Poll,Prof. Ben Affleck,2020-02-24 15:49:30+00:00,This is excellent work!,4.0,,camodeling
+140,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 4.1 - Case study: Traffic flow 1,4.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-04 02:25:05+00:00,This is excellent work!,,,
+141,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 4.2 - Case study: Traffic flow 2,4.2,video,,,,Prof. Ben Affleck,2020-02-14 16:40:17+00:00,This is excellent work!,4.0,,camodeling
+142,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 5.2 - Introduction to networks,5.2,poll,,,Reflection Poll,Prof. Ben Affleck,2020-03-11 16:28:47+00:00,This is excellent work!,2.0,,networkmodeling
+143,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 6.2 - Dynamics on networks,6.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-11 13:38:51+00:00,This is excellent work!,1.0,,interpretresults
+144,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 7.1 - Dynamics of network structure,7.1,video,,,,Prof. Ben Affleck,2020-03-28 21:00:30+00:00,This is excellent work!,3.0,,networkmodeling
+145,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 7.2 - Adaptive networks,7.2,poll,,,Poll A,Prof. Ben Affleck,2020-03-08 20:48:29+00:00,This is excellent work!,3.0,,networkmodeling
+146,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.1 - Network metrics and percolation,8.1,poll,,,Poll A,Prof. Ben Affleck,2020-03-09 15:36:44+00:00,This is excellent work!,4.0,,networkanalysis
+147,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.1 - Network metrics and percolation,8.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-17 10:21:23+00:00,This is excellent work!,,,
+148,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.2 - PageRank in citation networks,8.2,poll,,,Reflection Poll,Prof. Ben Affleck,2020-03-13 07:58:18+00:00,This is excellent work!,2.0,,interpretresults
+149,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.2 - PageRank in citation networks,8.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-25 03:30:15+00:00,This is excellent work!,,,
+150,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 9.2 - Networks unit synthesis,9.2,video,,,,Prof. Ben Affleck,2020-03-31 16:22:09+00:00,This is excellent work!,3.0,,networkmodeling
+151,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 10.1 - Simulations with random numbers,10.1,poll,,,Reflection Poll,Prof. Ben Affleck,2020-04-12 18:05:04+00:00,This is excellent work!,3.0,,mcmodeling
+152,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 10.2 - Random numbers from simulations,10.2,poll,,,Reflection poll,Prof. Ben Affleck,2020-03-31 16:40:47+00:00,This is excellent work!,1.0,,interpretresults
+153,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 12.1 - The Ising model 1,12.1,video,,,,Prof. Ben Affleck,2020-05-03 09:35:31+00:00,This is excellent work!,3.0,,mcmodeling
+154,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 13.1 - The Ising model 2,13.1,video,,,,Prof. Ben Affleck,2020-04-19 20:08:16+00:00,This is excellent work!,5.0,,mcmodeling
+155,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 13.2 - Random walks in finance,13.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-04-28 09:35:17+00:00,This is excellent work!,5.0,,mcmodeling
+156,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 14.1 - The Kelly criterion,14.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-04-26 15:03:56+00:00,This is excellent work!,5.0,,mcmodeling
+157,Student_2,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 14.2 - MCMC methods for parameter estimation,14.2,poll,,,Poll A,Prof. Ben Affleck,2020-05-11 04:40:27+00:00,This is excellent work!,2.0,,mcmodeling
+158,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-23 18:12:02+00:00,This is excellent work!,,,
+159,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-03-03 14:51:24+00:00,This is excellent work!,5.0,responsibility,
+160,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-22 14:56:42+00:00,This is excellent work!,3.0,,interpretresults
+161,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-15 15:16:49+00:00,This is excellent work!,,,
+162,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-13 14:58:47+00:00,This is excellent work!,5.0,,pythonimplementation
+163,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-22 14:51:54+00:00,This is excellent work!,,,
+164,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-02 14:53:02+00:00,This is excellent work!,,,
+165,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-13 14:57:48+00:00,This is excellent work!,4.0,professionalism,
+166,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-10 14:57:54+00:00,This is excellent work!,3.0,,professionalism
+167,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-06 14:59:04+00:00,This is excellent work!,4.0,modeling,
+168,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-26 14:40:56+00:00,This is excellent work!,,,
+169,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-31 14:41:17+00:00,This is excellent work!,,,
+170,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-19 14:44:10+00:00,This is excellent work!,,,
+171,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-10 14:47:02+00:00,This is excellent work!,,,
+172,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-08 15:21:44+00:00,This is excellent work!,,,
+173,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-18 14:54:30+00:00,This is excellent work!,,,
+174,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-17 09:36:46+00:00,This is excellent work!,1.0,,pythonimplementation
+175,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-04-05 15:34:32+00:00,This is excellent work!,4.0,,pythonimplementation
+176,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-04-03 15:38:28+00:00,This is excellent work!,,,
+177,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-24 15:37:38+00:00,This is excellent work!,4.0,,camodeling
+178,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-26 15:44:48+00:00,This is excellent work!,2.0,,interpretresults
+179,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-23 15:45:03+00:00,This is excellent work!,,,
+180,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-05 15:46:50+00:00,This is excellent work!,4.0,,interpretresults
+181,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-15 15:47:27+00:00,This is excellent work!,4.0,modeling,
+182,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-19 15:48:52+00:00,This is excellent work!,3.0,dataviz,
+183,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-04-02 15:51:37+00:00,This is excellent work!,3.0,,professionalism
+184,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-13 15:51:41+00:00,This is excellent work!,4.0,professionalism,
+185,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-31 15:53:18+00:00,This is excellent work!,5.0,confidenceintervals,
+186,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-01 18:13:42+00:00,This is excellent work!,4.0,professionalism,
+187,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-28 20:57:30+00:00,This is excellent work!,,,
+188,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-06 20:58:58+00:00,This is excellent work!,,,
+189,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-01 18:14:46+00:00,This is excellent work!,2.0,,pythonimplementation
+190,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-25 15:45:56+00:00,This is excellent work!,,,
+191,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-04 15:57:58+00:00,This is excellent work!,,,
+192,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-03 16:30:35+00:00,This is excellent work!,,,
+193,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-02 10:59:00+00:00,This is excellent work!,,,
+194,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-23 10:59:26+00:00,This is excellent work!,,,
+195,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-19 11:00:54+00:00,This is excellent work!,,,
+196,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-25 18:13:16+00:00,This is excellent work!,,,
+197,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-24 18:14:03+00:00,This is excellent work!,2.0,,professionalism
+198,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-23 18:14:29+00:00,This is excellent work!,,,
+199,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-06 18:16:20+00:00,This is excellent work!,,,
+200,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-07 18:16:52+00:00,This is excellent work!,,,
+201,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-24 18:18:46+00:00,This is excellent work!,,,
+202,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-29 18:25:40+00:00,This is excellent work!,4.0,,networkmodeling
+203,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-07 18:26:25+00:00,This is excellent work!,4.0,,networkmodeling
+204,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-24 18:28:37+00:00,This is excellent work!,3.0,,networkmodeling
+205,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-13 18:29:30+00:00,This is excellent work!,5.0,,networkanalysis
+206,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-22 18:31:17+00:00,This is excellent work!,1.0,,networkanalysis
+207,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-03 18:35:00+00:00,This is excellent work!,2.0,,networkanalysis
+208,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-11 18:47:18+00:00,This is excellent work!,3.0,,pythonimplementation
+209,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-05 13:43:27+00:00,This is excellent work!,3.0,,interpretresults
+210,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-18 18:49:59+00:00,This is excellent work!,,,
+211,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-08 18:51:38+00:00,This is excellent work!,3.0,,interpretresults
+212,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-13 18:57:25+00:00,This is excellent work!,3.0,modeling,
+213,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-06 18:55:30+00:00,This is excellent work!,1.0,networks,
+214,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-29 18:55:57+00:00,This is excellent work!,1.0,organization,
+215,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-04 18:56:52+00:00,This is excellent work!,,,
+216,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Final project proposal,False,,Prof. Ben Affleck,2020-04-17 12:53:23+00:00,This is excellent work!,,,
+217,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 1.1 - Course overview,1.1,poll,,,Prep poll C,Prof. Ben Affleck,2020-02-14 17:08:00+00:00,This is excellent work!,1.0,,pythonimplementation
+218,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 1.2 - Simulation project,1.2,poll,,,Poll A,Prof. Ben Affleck,2020-01-29 11:46:04+00:00,This is excellent work!,3.0,variables,
+219,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.1 - Introduction to cellular automata,2.1,poll,,,Reflection poll,Prof. Ben Affleck,2020-02-17 18:30:45+00:00,This is excellent work!,3.0,,camodeling
+220,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.1 - Introduction to cellular automata,2.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-15 07:49:22+00:00,This is excellent work!,,,
+221,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.2 - Simulating cellular automata,2.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-18 14:07:36+00:00,This is excellent work!,3.0,,pythonimplementation
+222,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 3.1 - Mean-field approximation,3.1,video,,,,Prof. Ben Affleck,2020-02-17 21:42:44+00:00,This is excellent work!,4.0,,caanalysis
+223,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 3.1 - Mean-field approximation,3.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-24 13:03:03+00:00,This is excellent work!,,,
+224,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 3.2 - Percolation and renormalization,3.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-26 09:39:05+00:00,This is excellent work!,1.0,,caanalysis
+225,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 4.1 - Case study: Traffic flow 1,4.1,poll,,,Reflection Poll,Prof. Ben Affleck,2020-02-22 15:50:13+00:00,This is excellent work!,3.0,,camodeling
+226,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 4.1 - Case study: Traffic flow 1,4.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-02 02:31:23+00:00,This is excellent work!,,,
+227,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 4.2 - Case study: Traffic flow 2,4.2,video,,,,Prof. Ben Affleck,2020-03-06 16:43:59+00:00,This is excellent work!,5.0,,camodeling
+228,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 5.2 - Introduction to networks,5.2,poll,,,Reflection Poll,Prof. Ben Affleck,2020-02-25 16:34:51+00:00,This is excellent work!,3.0,,networkmodeling
+229,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 6.2 - Dynamics on networks,6.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-18 04:48:53+00:00,This is excellent work!,2.0,,interpretresults
+230,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 7.1 - Dynamics of network structure,7.1,video,,,,Prof. Ben Affleck,2020-03-18 21:02:25+00:00,This is excellent work!,2.0,,networkmodeling
+231,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 7.2 - Adaptive networks,7.2,poll,,,Poll A,Prof. Ben Affleck,2020-03-10 20:50:07+00:00,This is excellent work!,5.0,,networkmodeling
+232,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.1 - Network metrics and percolation,8.1,poll,,,Poll A,Prof. Ben Affleck,2020-03-15 13:21:26+00:00,This is excellent work!,3.0,,networkanalysis
+233,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.1 - Network metrics and percolation,8.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-14 10:23:09+00:00,This is excellent work!,,,
+234,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 9.1 - Mean field approximation,9.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-30 19:27:12+00:00,This is excellent work!,5.0,,pythonimplementation
+235,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 9.2 - Networks unit synthesis,9.2,video,,,,Prof. Ben Affleck,2020-03-24 16:23:09+00:00,This is excellent work!,4.0,,networkmodeling
+236,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 10.1 - Simulations with random numbers,10.1,poll,,,Reflection Poll,Prof. Ben Affleck,2020-04-05 18:08:13+00:00,This is excellent work!,3.0,,mcmodeling
+237,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 10.2 - Random numbers from simulations,10.2,poll,,,Reflection poll,Prof. Ben Affleck,2020-04-10 18:03:29+00:00,This is excellent work!,4.0,,interpretresults
+238,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 12.1 - The Ising model 1,12.1,video,,,,Prof. Ben Affleck,2020-04-14 09:39:07+00:00,This is excellent work!,5.0,,mcmodeling
+239,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 12.1 - The Ising model 1,12.1,video,,,,Prof. Ben Affleck,2020-04-16 09:40:17+00:00,This is excellent work!,3.0,,mcmodeling
+240,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 12.2 - The Metropolis-Hastings method,12.2,poll,,,Poll A,Prof. Ben Affleck,2020-04-24 16:32:42+00:00,This is excellent work!,3.0,,mcmodeling
+241,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 14.1 - The Kelly criterion,14.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-04-30 15:21:13+00:00,This is excellent work!,3.0,,mcmodeling
+242,Student_3,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 14.2 - MCMC methods for parameter estimation,14.2,poll,,,Poll A,Prof. Ben Affleck,2020-05-08 04:44:43+00:00,This is excellent work!,5.0,,mcmodeling
+243,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-01-28 18:12:22+00:00,This is excellent work!,,,
+244,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-08 15:38:52+00:00,This is excellent work!,,,
+245,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-18 15:42:49+00:00,This is excellent work!,,,
+246,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-18 15:38:15+00:00,This is excellent work!,4.0,,interpretresults
+247,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-17 15:29:41+00:00,This is excellent work!,5.0,responsibility,
+248,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-11 15:36:53+00:00,This is excellent work!,3.0,,pythonimplementation
+249,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-06 15:27:13+00:00,This is excellent work!,,,
+250,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-09 15:27:48+00:00,This is excellent work!,,,
+251,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-29 15:28:23+00:00,This is excellent work!,,,
+252,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-02 15:38:22+00:00,This is excellent work!,3.0,modeling,
+253,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-18 15:38:48+00:00,This is excellent work!,4.0,professionalism,
+254,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-22 15:38:52+00:00,This is excellent work!,4.0,,professionalism
+255,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-02-23 14:27:52+00:00,This is excellent work!,,,
+256,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-22 15:54:56+00:00,This is excellent work!,,,
+257,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-04-05 15:55:33+00:00,This is excellent work!,,,
+258,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-17 15:58:11+00:00,This is excellent work!,,,
+259,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-31 17:01:12+00:00,This is excellent work!,,,
+260,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-21 17:02:34+00:00,This is excellent work!,2.0,confidenceintervals,
+261,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-22 17:03:22+00:00,This is excellent work!,,,
+262,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-13 09:42:27+00:00,This is excellent work!,3.0,,pythonimplementation
+263,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-21 17:09:40+00:00,This is excellent work!,2.0,,pythonimplementation
+264,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-12 17:10:22+00:00,This is excellent work!,,,
+265,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-16 18:59:09+00:00,This is excellent work!,,,
+266,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-28 17:20:27+00:00,This is excellent work!,,,
+267,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-04-03 17:26:41+00:00,This is excellent work!,,,
+268,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-23 17:43:59+00:00,This is excellent work!,3.0,,camodeling
+269,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-09 19:00:11+00:00,This is excellent work!,,,
+270,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-04-02 19:01:51+00:00,This is excellent work!,2.0,,interpretresults
+271,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-19 19:03:43+00:00,This is excellent work!,4.0,,interpretresults
+272,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-27 19:04:23+00:00,This is excellent work!,,,
+273,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-18 19:04:44+00:00,This is excellent work!,,,
+274,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-08 19:06:34+00:00,This is excellent work!,3.0,modeling,
+275,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-17 19:10:35+00:00,This is excellent work!,4.0,,professionalism
+276,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-21 19:08:29+00:00,This is excellent work!,3.0,professionalism,
+277,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-30 20:27:01+00:00,This is excellent work!,3.0,professionalism,
+278,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-28 19:10:37+00:00,This is excellent work!,,,
+279,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-07 19:11:32+00:00,This is excellent work!,,,
+280,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-15 19:19:37+00:00,This is excellent work!,,,
+281,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-23 19:23:07+00:00,This is excellent work!,4.0,,networkmodeling
+282,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-04 19:23:17+00:00,This is excellent work!,3.0,,professionalism
+283,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-04 19:26:37+00:00,This is excellent work!,5.0,,networkmodeling
+284,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-27 20:24:35+00:00,This is excellent work!,,,
+285,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-22 20:25:58+00:00,This is excellent work!,,,
+286,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-14 20:26:40+00:00,This is excellent work!,,,
+287,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-07 20:28:05+00:00,This is excellent work!,,,
+288,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-14 20:30:53+00:00,This is excellent work!,,,
+289,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-12 20:31:15+00:00,This is excellent work!,,,
+290,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-24 20:34:41+00:00,This is excellent work!,,,
+291,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-01 20:38:20+00:00,This is excellent work!,5.0,,networkanalysis
+292,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-10 20:39:04+00:00,This is excellent work!,3.0,,networkanalysis
+293,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-05 20:40:10+00:00,This is excellent work!,4.0,,interpretresults
+294,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-01 20:40:54+00:00,This is excellent work!,3.0,,interpretresults
+295,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-06 20:43:18+00:00,This is excellent work!,3.0,,pythonimplementation
+296,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-20 20:43:43+00:00,This is excellent work!,4.0,,pythonimplementation
+297,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-22 20:44:52+00:00,This is excellent work!,3.0,modeling,
+298,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-30 20:44:57+00:00,This is excellent work!,4.0,networks,
+299,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Final project proposal,False,,Prof. Ben Affleck,2020-04-24 12:53:40+00:00,This is excellent work!,,,
+300,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 1.1 - Course overview,1.1,poll,,,Prep poll C,Prof. Ben Affleck,2020-02-06 17:13:42+00:00,This is excellent work!,2.0,,pythonimplementation
+301,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 1.2 - Simulation project,1.2,poll,,,Poll A,Prof. Ben Affleck,2020-02-15 11:52:32+00:00,This is excellent work!,2.0,variables,
+302,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.1 - Introduction to cellular automata,2.1,poll,,,Reflection poll,Prof. Ben Affleck,2020-02-25 18:31:53+00:00,This is excellent work!,5.0,,camodeling
+303,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.1 - Introduction to cellular automata,2.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-15 07:49:24+00:00,This is excellent work!,,,
+304,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.2 - Simulating cellular automata,2.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-05 13:05:57+00:00,This is excellent work!,3.0,,pythonimplementation
+305,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 3.1 - Mean-field approximation,3.1,video,,,,Prof. Ben Affleck,2020-02-23 21:46:27+00:00,This is excellent work!,1.0,,caanalysis
+306,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 3.1 - Mean-field approximation,3.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-19 13:05:10+00:00,This is excellent work!,,,
+307,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 3.2 - Percolation and renormalization,3.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-26 16:05:13+00:00,This is excellent work!,4.0,,caanalysis
+308,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 4.1 - Case study: Traffic flow 1,4.1,poll,,,Reflection Poll,Prof. Ben Affleck,2020-03-02 15:50:52+00:00,This is excellent work!,4.0,,camodeling
+309,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 4.1 - Case study: Traffic flow 1,4.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-05 02:38:29+00:00,This is excellent work!,,,
+310,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 4.2 - Case study: Traffic flow 2,4.2,video,,,,Prof. Ben Affleck,2020-03-09 16:43:11+00:00,This is excellent work!,3.0,,camodeling
+311,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 5.2 - Introduction to networks,5.2,poll,,,Reflection Poll,Prof. Ben Affleck,2020-03-07 16:34:51+00:00,This is excellent work!,4.0,,networkmodeling
+312,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 6.2 - Dynamics on networks,6.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-27 04:48:51+00:00,This is excellent work!,3.0,,interpretresults
+313,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 7.1 - Dynamics of network structure,7.1,video,,,,Prof. Ben Affleck,2020-03-20 21:05:53+00:00,This is excellent work!,5.0,,pythonimplementation
+314,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.1 - Network metrics and percolation,8.1,poll,,,Poll A,Prof. Ben Affleck,2020-03-13 15:35:57+00:00,This is excellent work!,1.0,,networkanalysis
+315,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.1 - Network metrics and percolation,8.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-18 10:25:06+00:00,This is excellent work!,,,
+316,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.2 - PageRank in citation networks,8.2,poll,,,Reflection Poll,Prof. Ben Affleck,2020-04-08 07:58:18+00:00,This is excellent work!,3.0,,interpretresults
+317,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.2 - PageRank in citation networks,8.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-19 08:28:00+00:00,This is excellent work!,,,
+318,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 9.1 - Mean field approximation,9.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-04-06 19:09:14+00:00,This is excellent work!,5.0,,pythonimplementation
+319,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 9.2 - Networks unit synthesis,9.2,video,,,,Prof. Ben Affleck,2020-03-27 16:23:58+00:00,This is excellent work!,4.0,,networkmodeling
+320,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 10.1 - Simulations with random numbers,10.1,poll,,,Reflection Poll,Prof. Ben Affleck,2020-04-21 18:08:13+00:00,This is excellent work!,2.0,,mcmodeling
+321,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 10.2 - Random numbers from simulations,10.2,poll,,,Reflection poll,Prof. Ben Affleck,2020-04-14 16:43:03+00:00,This is excellent work!,3.0,,interpretresults
+322,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 12.1 - The Ising model 1,12.1,video,,,,Prof. Ben Affleck,2020-04-16 09:40:34+00:00,This is excellent work!,,,
+323,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 12.1 - The Ising model 1,12.1,video,,,,Prof. Ben Affleck,2020-04-29 09:41:59+00:00,This is excellent work!,,,
+324,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 12.1 - The Ising model 1,12.1,video,,,,Prof. Ben Affleck,2020-04-28 09:43:49+00:00,This is excellent work!,3.0,,mcmodeling
+325,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 12.2 - The Metropolis-Hastings method,12.2,poll,,,Poll A,Prof. Ben Affleck,2020-04-26 16:33:19+00:00,This is excellent work!,2.0,,mcmodeling
+326,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 13.1 - The Ising model 2,13.1,video,,,,Prof. Ben Affleck,2020-05-09 20:09:30+00:00,This is excellent work!,,,
+327,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 13.1 - The Ising model 2,13.1,video,,,,Prof. Ben Affleck,2020-04-30 20:10:41+00:00,This is excellent work!,4.0,,mcmodeling
+328,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 13.2 - Random walks in finance,13.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-05-04 09:36:37+00:00,This is excellent work!,3.0,,mcmodeling
+329,Student_4,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 14.1 - The Kelly criterion,14.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-05-11 15:05:15+00:00,This is excellent work!,3.0,,mcmodeling
+330,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-05 18:05:35+00:00,This is excellent work!,,,
+331,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-23 18:13:21+00:00,This is excellent work!,,,
+332,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-13 14:37:11+00:00,This is excellent work!,2.0,responsibility,
+333,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-26 14:30:03+00:00,This is excellent work!,2.0,,pythonimplementation
+334,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-20 15:00:51+00:00,This is excellent work!,,,
+335,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-20 14:30:12+00:00,This is excellent work!,2.0,,interpretresults
+336,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-16 14:30:18+00:00,This is excellent work!,2.0,modeling,
+337,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-22 14:31:11+00:00,This is excellent work!,3.0,professionalism,
+338,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-21 14:33:38+00:00,This is excellent work!,2.0,dataviz,
+339,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-12 14:34:47+00:00,This is excellent work!,,,
+340,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-18 14:35:13+00:00,This is excellent work!,4.0,leadprinciples,
+341,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-08 14:35:39+00:00,This is excellent work!,,,
+342,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-21 14:36:08+00:00,This is excellent work!,,,
+343,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-15 14:36:39+00:00,This is excellent work!,,,
+344,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Elevator simulation,False,,Prof. Ben Affleck,2020-02-12 14:37:19+00:00,This is excellent work!,2.0,,professionalism
+345,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-16 19:09:32+00:00,This is excellent work!,,,
+346,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-06 21:54:15+00:00,This is excellent work!,3.0,,professionalism
+347,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-21 19:10:18+00:00,This is excellent work!,5.0,professionalism,
+348,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-23 19:47:32+00:00,This is excellent work!,,,
+349,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-19 19:49:05+00:00,This is excellent work!,,,
+350,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-10 19:49:38+00:00,This is excellent work!,,,
+351,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-10 19:55:33+00:00,This is excellent work!,,,
+352,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-24 09:34:03+00:00,This is excellent work!,2.0,confidenceintervals,
+353,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-19 20:40:14+00:00,This is excellent work!,,,
+354,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-16 09:43:34+00:00,This is excellent work!,1.0,,pythonimplementation
+355,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-20 21:03:32+00:00,This is excellent work!,2.0,,pythonimplementation
+356,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-29 21:08:06+00:00,This is excellent work!,,,
+357,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-21 21:23:29+00:00,This is excellent work!,5.0,,interpretresults
+358,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-26 09:32:53+00:00,This is excellent work!,,,
+359,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-11 21:30:11+00:00,This is excellent work!,4.0,modeling,
+360,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-25 21:54:26+00:00,This is excellent work!,,,
+361,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-16 09:29:27+00:00,This is excellent work!,5.0,,camodeling
+362,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-26 21:56:27+00:00,This is excellent work!,4.0,,interpretresults
+363,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-19 15:44:33+00:00,This is excellent work!,,,
+364,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-04-06 09:30:47+00:00,This is excellent work!,,,
+365,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-03-29 19:55:02+00:00,This is excellent work!,,,
+366,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Traffic simulation,False,,Prof. Ben Affleck,2020-04-04 08:34:52+00:00,This is excellent work!,4.0,,camodeling
+367,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-05 20:47:30+00:00,This is excellent work!,,,
+368,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-04 20:48:17+00:00,This is excellent work!,,,
+369,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-09 20:52:17+00:00,This is excellent work!,,,
+370,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-29 20:58:14+00:00,This is excellent work!,,,
+371,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-06 21:00:35+00:00,This is excellent work!,,,
+372,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-08 21:00:57+00:00,This is excellent work!,,,
+373,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-07 21:02:11+00:00,This is excellent work!,,,
+374,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-25 09:47:29+00:00,This is excellent work!,,,
+375,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-18 09:48:06+00:00,This is excellent work!,,,
+376,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-28 09:53:26+00:00,This is excellent work!,2.0,professionalism,
+377,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-28 09:53:30+00:00,This is excellent work!,5.0,,professionalism
+378,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-22 09:49:48+00:00,This is excellent work!,,,
+379,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-17 09:51:44+00:00,This is excellent work!,,,
+380,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-08 09:53:01+00:00,This is excellent work!,,,
+381,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-21 09:57:09+00:00,This is excellent work!,,,
+382,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-15 12:43:19+00:00,This is excellent work!,,,
+383,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-04 12:44:16+00:00,This is excellent work!,,,
+384,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-05 12:45:20+00:00,This is excellent work!,,,
+385,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-06 12:47:34+00:00,This is excellent work!,,,
+386,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-04 12:54:38+00:00,This is excellent work!,5.0,,networkmodeling
+387,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-09 12:54:47+00:00,This is excellent work!,2.0,,networkmodeling
+388,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-20 12:58:00+00:00,This is excellent work!,4.0,,networkmodeling
+389,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-23 13:43:58+00:00,This is excellent work!,4.0,,networkmodeling
+390,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-12 12:59:56+00:00,This is excellent work!,4.0,,networkanalysis
+391,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-21 13:00:02+00:00,This is excellent work!,4.0,,networkanalysis
+392,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-06 13:00:06+00:00,This is excellent work!,5.0,,networkanalysis
+393,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-09 13:00:11+00:00,This is excellent work!,2.0,,networkanalysis
+394,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-16 13:01:27+00:00,This is excellent work!,4.0,,pythonimplementation
+395,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-20 13:02:03+00:00,This is excellent work!,4.0,,pythonimplementation
+396,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-19 13:02:44+00:00,This is excellent work!,,,
+397,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-04-30 13:04:10+00:00,This is excellent work!,2.0,,interpretresults
+398,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-03 13:04:45+00:00,This is excellent work!,5.0,,interpretresults
+399,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-04 13:05:45+00:00,This is excellent work!,5.0,modeling,
+400,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-07 13:05:49+00:00,This is excellent work!,2.0,networks,
+401,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Network simulation,False,,Prof. Ben Affleck,2020-05-09 13:06:36+00:00,This is excellent work!,,,
+402,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,,,assignment,Final project proposal,False,,Prof. Ben Affleck,2020-04-17 12:53:48+00:00,This is excellent work!,,,
+403,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 1.1 - Course overview,1.1,poll,,,Prep poll C,Prof. Ben Affleck,2020-02-07 17:12:52+00:00,This is excellent work!,5.0,,pythonimplementation
+404,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 1.2 - Simulation project,1.2,poll,,,Poll A,Prof. Ben Affleck,2020-01-28 11:47:42+00:00,This is excellent work!,3.0,variables,
+405,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.1 - Introduction to cellular automata,2.1,poll,,,Reflection poll,Prof. Ben Affleck,2020-02-17 18:32:09+00:00,This is excellent work!,4.0,,camodeling
+406,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.1 - Introduction to cellular automata,2.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-21 07:28:22+00:00,This is excellent work!,,,
+407,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 2.2 - Simulating cellular automata,2.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-01 14:09:15+00:00,This is excellent work!,3.0,,pythonimplementation
+408,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 3.1 - Mean-field approximation,3.1,video,,,,Prof. Ben Affleck,2020-02-19 21:48:51+00:00,This is excellent work!,4.0,,caanalysis
+409,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 3.1 - Mean-field approximation,3.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-23 03:12:41+00:00,This is excellent work!,,,
+410,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 3.2 - Percolation and renormalization,3.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-02-27 16:47:00+00:00,This is excellent work!,3.0,,caanalysis
+411,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 4.2 - Case study: Traffic flow 2,4.2,video,,,,Prof. Ben Affleck,2020-02-20 16:59:24+00:00,This is excellent work!,4.0,,camodeling
+412,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 5.2 - Introduction to networks,5.2,poll,,,Reflection Poll,Prof. Ben Affleck,2020-02-28 16:34:26+00:00,This is excellent work!,5.0,,networkmodeling
+413,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 6.2 - Dynamics on networks,6.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-21 13:42:23+00:00,This is excellent work!,3.0,,interpretresults
+414,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 7.1 - Dynamics of network structure,7.1,video,,,,Prof. Ben Affleck,2020-03-04 21:08:19+00:00,This is excellent work!,4.0,,networkmodeling
+415,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 7.2 - Adaptive networks,7.2,poll,,,Poll A,Prof. Ben Affleck,2020-03-12 20:55:04+00:00,This is excellent work!,2.0,,networkmodeling
+416,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.1 - Network metrics and percolation,8.1,poll,,,Poll A,Prof. Ben Affleck,2020-03-28 13:25:51+00:00,This is excellent work!,4.0,,networkanalysis
+417,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.1 - Network metrics and percolation,8.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-30 10:26:21+00:00,This is excellent work!,,,
+418,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.2 - PageRank in citation networks,8.2,poll,,,Reflection Poll,Prof. Ben Affleck,2020-03-23 07:58:18+00:00,This is excellent work!,5.0,,interpretresults
+419,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 8.2 - PageRank in citation networks,8.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-03-20 08:19:06+00:00,This is excellent work!,,,
+420,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 9.1 - Mean field approximation,9.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-04-10 19:15:42+00:00,This is excellent work!,4.0,,pythonimplementation
+421,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 9.2 - Networks unit synthesis,9.2,video,,,,Prof. Ben Affleck,2020-04-03 16:25:28+00:00,This is excellent work!,3.0,,networkmodeling
+422,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 10.1 - Simulations with random numbers,10.1,poll,,,Reflection Poll,Prof. Ben Affleck,2020-04-05 18:15:40+00:00,This is excellent work!,4.0,,mcmodeling
+423,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 10.2 - Random numbers from simulations,10.2,poll,,,Reflection poll,Prof. Ben Affleck,2020-04-11 17:31:47+00:00,This is excellent work!,4.0,,interpretresults
+424,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 12.1 - The Ising model 1,12.1,video,,,,Prof. Ben Affleck,2020-04-14 09:45:23+00:00,This is excellent work!,3.0,,mcmodeling
+425,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 12.2 - The Metropolis-Hastings method,12.2,poll,,,Poll A,Prof. Ben Affleck,2020-04-16 16:33:49+00:00,This is excellent work!,4.0,,mcmodeling
+426,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 13.1 - The Ising model 2,13.1,video,,,,Prof. Ben Affleck,2020-04-21 20:11:07+00:00,This is excellent work!,,,
+427,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 13.1 - The Ising model 2,13.1,video,,,,Prof. Ben Affleck,2020-04-26 20:11:38+00:00,This is excellent work!,4.0,,mcmodeling
+428,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 13.2 - Random walks in finance,13.2,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-05-01 18:11:07+00:00,This is excellent work!,3.0,,mcmodeling
+429,Student_5,1111,"Modeling, Simulation, and Decision Making",CS166,CS166 Session 14.1 - The Kelly criterion,14.1,poll,,,Pre-class work poll,Prof. Ben Affleck,2020-05-06 15:10:11+00:00,This is excellent work!,5.0,,mcmodeling
