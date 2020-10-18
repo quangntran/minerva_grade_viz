@@ -1,10 +1,38 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <h2>Upload</h2>
-<form acion="/chart/" method="post" enctype="multipart/form-data">
+<form acion="view_teapot/" method="post" enctype="multipart/form-data">
     {% csrf_token %}
+    {{ form }}
+<!--
     <input type="file" name="document">
-    <button type="submit">Upload file</button>
+    <label for="lo_list">LO in order</label><br>
+    <input type="text" id="lo_list" name="lo_list"><br>
+    <label for="co_list">CO in order</label><br>
+    <input type="text" id="co_list" name="co_list"><br>
+    <label for="assignment_title">Assignment Titles</label><br>
+    <input type="text" id="assignment_title" name="assignment_title"><br>
+    <label for="assignment_weight">Assignment Weights</label><br>
+    <input type="text" id="assignment_weight" name="assignment_weight"><br>
+    <label for="default_lo">LOs to highlight in LO evolution graph</label><br>
+    <input type="text" id="default_lo" name="default_lo"><br>
+-->
+    <button type="submit">Submit</button>
 </form>
 {% endblock %}
+
+
+<!--
+
+LO_IN_ORDER = ["mcanalysis", "mcmodeling", "interpretresults", "professionalism", "pythonimplementation","caanalysis", "camodeling", "networkanalysis","networkmodeling"]
+CO_IN_ORDER = ["MonteCarlo","MonteCarlo","Simulations","Simulations","Simulations","Cellular Automata","Cellular Automata","Networks","Networks"]
+ASSIGNMENT_TITLES =  ["Elevator simulation",
+                        "Traffic simulation",
+                        "Network simulation",
+                        'Final project proposal',
+                        "Final project"]
+ASSIGNMENT_WEIGHTS = [2, 6, 6, 0, 10]
+DEFAULT_LO_TO_DISPLAY_IN_EVOLUTION = ['networkanalysis', 'networkmodeling']
+-->

@@ -2,26 +2,80 @@
 {% load static %}
 
 {% block content %}
+
+
+<!--
 <div>
     <a href="/view_teapot">To teapot </a>
 </div>
+-->
 <div class="jumbotron text-center">
   <div class="container">
+<!--
     <a href="/" class="lang-logo">
       <img src="{% static 'lang-logo.png'%}">
     </a>
-    <h1>Getting Started with Python on Heroku</h1>
-    <p>This is a sample Python application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-python"><span class="glyphicon glyphicon-flash"></span> Getting Started with Python</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/python-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
+-->
+    <h1>Grades Visualization Tool for Minerva's Instructor</h1>
+    <p>Upload grade data in .csv format downloaded from Minerva's Forum and get reports on each students's performance and class statistics, including class CO performance, LO performance, and how each LO affects students' grades.</p>
+      
+    <div class="tabdemo">
+           <button class="tablinksdemo active" onclick="demotabs(event, 'use_tool')">Use Tool</button>
+           <button class="tablinksdemo" onclick="demotabs(event, 'demo')">Demo</button>
+           
+    </div>
+      <script language = "Javascript">
+           function demotabs(evt, cityName) {
+              // Declare all variables
+              var i, tabcontent, tablinks;
+
+              // Get all elements with class="tabcontent" and hide them
+              tabcontent = document.getElementsByClassName("tabcontentdemo");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+
+              // Get all elements with class="tablinks" and remove the class "active"
+              tablinks = document.getElementsByClassName("tablinksdemo");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+
+              // Show the current tab, and add an "active" class to the button that opened the tab
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+        </script>
+    <div id="demo" class="tabcontentdemo"  style="background-color:white;color:black;display:none">
+     
+      {% include 'demo.html' %}
+    </div>
+    <div id="use_tool" class="tabcontentdemo"  style="background-color:white;color:black">
+        <form acion="/chart/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="submit-button">
+                <button style="text-align:center;margin: 0 auto;" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+<!--    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-python"><span class="glyphicon glyphicon-flash"></span> Getting Started with Python</a>-->
+<!--    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/python-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>-->
   </div>
 </div>
 
 
 <div class="container">
+<!--
   <div class="alert alert-info text-center" role="alert">
     To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-python" class="alert-link">Getting Started with Python on Heroku</a> tutorial.
   </div>
+-->
+    <div class="text-center">
+        <h2>Demo</h2>
+        <p>Below is sample inputs and output graphs. The purpose of the input fields are explained further in each tab.</p>
+
+    </div>
   <hr>
   <div class="row">
     <div class="col-md-6">
@@ -60,69 +114,4 @@
   </div>
 </div>
 
-<div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
-
-      <script language = "JavaScript">
-         $(document).ready(function() {
-         });
-         $('#container').highcharts(json);
-          var title = {
-   text: 'Monthly Average Temperature'   
-};
-          var subtitle = {
-   text: 'Source: WorldClimate.com'
-};
-          var xAxis = {
-   categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'
-      ,'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-};
-          var yAxis = {
-   title: {
-      text: 'Temperature (\xB0C)'
-   },
-   plotLines: [{
-      value: 0,
-      width: 1,
-      color: '#808080'
-   }]
-};  
-          var tooltip = {
-   valueSuffix: '\xB0C'
-}
-          var legend = {
-   layout: 'vertical',
-   align: 'right',
-   verticalAlign: 'middle',
-   borderWidth: 0
-};
-          var series = [
-   {
-      name: 'Tokyo',
-      data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 40, 23.3, 18.3, 13.9, 9.6]
-   }, 
-   {
-      name: 'New York',
-      data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
-   }, 
-   {
-      name: 'Berlin',
-      data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
-   }, 
-   {
-      name: 'London',
-      data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-   }
-];
-          var json = {};
-
-json.title = title;
-json.subtitle = subtitle;
-json.xAxis = xAxis;
-json.yAxis = yAxis;
-json.tooltip = tooltip;
-json.legend = legend;
-json.series = series;
-          $('#container').highcharts(json);
-         
-      </script>
 {% endblock %}

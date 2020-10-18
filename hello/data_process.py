@@ -1,17 +1,18 @@
 import numpy as np
 import pandas as pd
 
-LO_IN_ORDER = ["mcanalysis", "mcmodeling", "interpretresults", "professionalism", "pythonimplementation","caanalysis", "camodeling", "networkanalysis","networkmodeling"]
-CO_IN_ORDER = ["MonteCarlo","MonteCarlo","Simulations","Simulations","Simulations","Cellular Automata","Cellular Automata","Networks","Networks"]
-ASSIGNMENT_TITLES =  ["Elevator simulation",
-                        "Traffic simulation",
-                        "Network simulation",
-                        'Final project proposal',
-                        "Final project"]
-ASSIGNMENT_WEIGHTS = [2, 6, 6, 0, 10]
-DEFAULT_LO_TO_DISPLAY_IN_EVOLUTION = ['networkanalysis', 'networkmodeling']
+#LO_IN_ORDER = ["mcanalysis", "mcmodeling", "interpretresults", "professionalism", "pythonimplementation","caanalysis", "camodeling", "networkanalysis","networkmodeling"]
+#CO_IN_ORDER = ["MonteCarlo","MonteCarlo","Simulations","Simulations","Simulations","Cellular Automata","Cellular Automata","Networks","Networks"]
+#ASSIGNMENT_TITLES =  ["Elevator simulation",
+#                        "Traffic simulation",
+#                        "Network simulation",
+#                        'Final project proposal',
+#                        "Final project"]
+#ASSIGNMENT_WEIGHTS = [2, 6, 6, 0, 10]
+#DEFAULT_LO_TO_DISPLAY_IN_EVOLUTION = ['networkanalysis', 'networkmodeling']
 
-def process_df(df):
+def process_df(df, params):
+    globals().update(params)
     # replace space in header with "_"
     df.rename(columns=lambda x: x.replace(' ', '_'), inplace=True)
     # change HC column to LO and vice versa, due to error in the data

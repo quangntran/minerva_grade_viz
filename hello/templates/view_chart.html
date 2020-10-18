@@ -1,11 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!--
 <html>
    <head>
       <title>Highcharts Tutorial</title>
       <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
       </script>
       <script src = "https://code.highcharts.com/highcharts.js"></script>  
-<!--       <script src="http://code.highcharts.com/modules/exporting.js"></script>-->
-<!--        <script src="http://code.highcharts.com/highcharts-more.js"></script>-->
        <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
          {% load static %}
@@ -14,10 +17,11 @@
        <link rel="stylesheet" type="text/css" href="{% static 'style-chart.css' %}">
        <link rel="stylesheet" type="text/css" href="{% static 'style-tab.css' %}">
    </head>
+-->
    
-   <body>
+<!--   <body>-->
        <div class="tab">
-           <button class="tablinks" onclick="openCity(event, 'LO_contribution')">LO Contribution</button>
+           <button class="tablinks active" onclick="openCity(event, 'LO_contribution')">LO Contribution</button>
            <button class="tablinks" onclick="openCity(event, 'LO_evolution')">LO Evolution</button>
            <button class="tablinks" onclick="openCity(event, 'LO_average')">LO Average</button>
            <button class="tablinks" onclick="openCity(event, 'CO_average')">CO Average</button>
@@ -44,7 +48,7 @@
   evt.currentTarget.className += " active";
 }
                </script>
-       <div id="LO_contribution" class="tabcontent">
+       <div id="LO_contribution" class="tabcontent" style="display:block">
            <div id="container_LO_contrib" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
       <script language = "JavaScript">
         $(document).ready(function() {  
@@ -726,6 +730,9 @@
            </ul>
        </div>
        </div>
+<!--
    </body>
    
 </html>
+-->
+{% endblock %}

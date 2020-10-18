@@ -1,0 +1,2415 @@
+
+       <div class="tab">
+           <button class="tablinks" onclick="openCity(event, 'LO_contribution')">LO Contribution</button>
+           <button class="tablinks" onclick="openCity(event, 'LO_evolution')">LO Evolution</button>
+           <button class="tablinks" onclick="openCity(event, 'LO_average')">LO Average</button>
+           <button class="tablinks" onclick="openCity(event, 'CO_average')">CO Average</button>
+       </div>
+       <script language = "Javascript">
+           function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+               </script>
+       <div id="LO_contribution" class="tabcontent" style="display:block">
+           <div id="container_LO_contrib" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+      <script language = "JavaScript">
+        $(document).ready(function() {  
+            var chart = {
+               type: 'bar',
+                zoomType: 'xy'
+            };
+            var title = {
+               text: 'Range of LO contribution for all students'
+            };
+            var subtitle = {
+//               text: 'Source: Wikipedia.org'  
+            };
+            var xAxis = {
+               categories: ['caanalysis', 'camodeling', 'interpretresults', 'professionalism', 'pythonimplementation', 'mcmodeling', 'networkanalysis', 'networkmodeling'],
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+                max:1,
+               title: {
+                  text: null,
+//                  align: 'high'
+               },
+//               labels: {
+//                  overflow: 'justify'
+//               }
+            };
+            var tooltip = {
+                          shared: true
+                          };
+//             
+           
+            var plotOptions = {
+               bar: {
+                  dataLabels: {
+                     enabled: true
+                  }
+               }
+            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+                  name: 'Mean',
+                   type: 'spline',
+                          lineWidth: '0px',
+                          marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                          fillColor: 'black',
+                        radius: 3,
+                        states: {
+                            hover: {
+                                enabled: true,
+                                lineWidth: 0
+                            }
+                        }
+                    },
+                   color: 'white',
+                   showInLegend: false,
+                   data: [0.03262159280517818, 0.22979546544828072, 0.09495082100524957, 0.0517817464705824, 0.08466713921128224, 0.26593567152969666, 0.10737597729979506, 0.1328715862299352],
+                    tooltip: {
+            pointFormat: '<span style="font-weight: bold">{series.name}</span>: {point.y:.2f}<br/> '
+        }
+                
+                   
+                    
+               },
+                {
+                          name: 'Range',
+                          type: 'errorbar',
+                    data: [[0.016586891871026646, 0.04979393665669283], [0.20373251192574254, 0.2532953056347799], [0.08894829975949554, 0.10168126964550306], [0.038120699896926666, 0.07242164056363745], [0.07008545860997173, 0.09998306328685146], [0.211655442945077, 0.31791542752801066], [0.08007465041185277, 0.1355701529975003], [0.10060407610229775, 0.171537744609082]],
+                    
+                    
+                          tooltip: {
+            pointFormat: '<b>Range:</b> {point.low:.2f}-{point.high:.2f}'
+        }
+                }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_LO_contrib').highcharts(json);
+         });
+      </script>
+           <div class="reduce">
+           <ul>
+               
+               <li>
+                   <div class="gridMap" id = "container_lo_contribStudent_1" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+//             var dup = function(n, object){
+//                 var ret = [];
+//                for (var i = 0; i<n; i++)
+//                {
+//                    ret[i] = obj;
+//                }
+//                return (ret);
+//             }
+            var plotLineId = 'meanPlotLineStudent_1';
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Average LO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_1'  
+            };
+            var xAxis = {
+               categories: ['caanalysis', 'camodeling', 'interpretresults', 'professionalism', 'pythonimplementation', 'mcmodeling', 'networkanalysis', 'networkmodeling'],
+               title: {
+                  text: null
+               }
+            };
+//                           var plotLineOptions = {
+//        color: '#FF0000',
+//        id: plotLineId, 
+//        width: 2,
+//        value: 2.5,
+//        dashStyle: 'shortdash',
+//        zIndex: 5,
+//    };
+            var yAxis = {
+               min: 0,
+                           max:1,
+//               title: {
+//                  text: 'Population (millions)',
+//                  align: 'high'
+//               },
+//               labels: {
+////                           text: 'Average course grade',
+//                  overflow: 'justify'
+//               },
+//                plotLines: [{
+//        id: plotLineId,
+//        name: 'Average course grade',
+//        color: 'red',
+//        width: 2,
+//        value: 2.5,
+//        zIndex: 5,
+//        label: {
+//                           text: 'Average course grade',
+//                           }
+//                           plotLineOptions
+//    }]
+            };
+                           
+            var tooltip = {
+//               valueSuffix: ' millions'
+            };
+//            var plotOptions = {
+//               bar: {
+//                  dataLabels: {
+//                     enabled: false
+//                  }
+//               }
+//            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+//                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   data: [{'y': 0.04979393665669283, 'color': 'black'}, {'y': 0.2205160051939254, 'color': 'black'}, {'y': 0.09346242872466551, 'color': 'black'}, {'y': 0.04999153164342573, 'color': 'black'}, {'y': 0.09998306328685146, 'color': 'black'}, {'y': 0.27386665161181056, 'color': 'black'}, {'y': 0.11178230678033084, 'color': 'black'}, {'y': 0.10060407610229775, 'color': 'black'}],
+                   showInLegend: false,
+//                           color: 'black'
+               },
+//                           {
+//                           name: 'Course average',
+//                           data: [2,3,4,3,2,4,1,4],
+//                           type: 'line',
+//                           zIndex: 10,
+//                           color: "#A9A9A9",
+//                           marker: {
+//                           lineWidth: 3,
+//                           radius: 0,
+//                           lineColor: "#A9A9A9",
+//                           }
+//                           
+//                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_lo_contribStudent_1').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               <li>
+                   <div class="gridMap" id = "container_lo_contribStudent_2" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+//             var dup = function(n, object){
+//                 var ret = [];
+//                for (var i = 0; i<n; i++)
+//                {
+//                    ret[i] = obj;
+//                }
+//                return (ret);
+//             }
+            var plotLineId = 'meanPlotLineStudent_2';
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Average LO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_2'  
+            };
+            var xAxis = {
+               categories: ['caanalysis', 'camodeling', 'interpretresults', 'professionalism', 'pythonimplementation', 'mcmodeling', 'networkanalysis', 'networkmodeling'],
+               title: {
+                  text: null
+               }
+            };
+//                           var plotLineOptions = {
+//        color: '#FF0000',
+//        id: plotLineId, 
+//        width: 2,
+//        value: 2.5,
+//        dashStyle: 'shortdash',
+//        zIndex: 5,
+//    };
+            var yAxis = {
+               min: 0,
+                           max:1,
+//               title: {
+//                  text: 'Population (millions)',
+//                  align: 'high'
+//               },
+//               labels: {
+////                           text: 'Average course grade',
+//                  overflow: 'justify'
+//               },
+//                plotLines: [{
+//        id: plotLineId,
+//        name: 'Average course grade',
+//        color: 'red',
+//        width: 2,
+//        value: 2.5,
+//        zIndex: 5,
+//        label: {
+//                           text: 'Average course grade',
+//                           }
+//                           plotLineOptions
+//    }]
+            };
+                           
+            var tooltip = {
+//               valueSuffix: ' millions'
+            };
+//            var plotOptions = {
+//               bar: {
+//                  dataLabels: {
+//                     enabled: false
+//                  }
+//               }
+//            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+//                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   data: [{'y': 0.016586891871026646, 'color': 'black'}, {'y': 0.232216486194373, 'color': 'black'}, {'y': 0.09344727814662898, 'color': 'black'}, {'y': 0.07242164056363745, 'color': 'black'}, {'y': 0.07008545860997173, 'color': 'black'}, {'y': 0.31791542752801066, 'color': 'black'}, {'y': 0.08007465041185277, 'color': 'black'}, {'y': 0.11725216667449868, 'color': 'black'}],
+                   showInLegend: false,
+//                           color: 'black'
+               },
+//                           {
+//                           name: 'Course average',
+//                           data: [2,3,4,3,2,4,1,4],
+//                           type: 'line',
+//                           zIndex: 10,
+//                           color: "#A9A9A9",
+//                           marker: {
+//                           lineWidth: 3,
+//                           radius: 0,
+//                           lineColor: "#A9A9A9",
+//                           }
+//                           
+//                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_lo_contribStudent_2').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               <li>
+                   <div class="gridMap" id = "container_lo_contribStudent_3" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+//             var dup = function(n, object){
+//                 var ret = [];
+//                for (var i = 0; i<n; i++)
+//                {
+//                    ret[i] = obj;
+//                }
+//                return (ret);
+//             }
+            var plotLineId = 'meanPlotLineStudent_3';
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Average LO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_3'  
+            };
+            var xAxis = {
+               categories: ['caanalysis', 'camodeling', 'interpretresults', 'professionalism', 'pythonimplementation', 'mcmodeling', 'networkanalysis', 'networkmodeling'],
+               title: {
+                  text: null
+               }
+            };
+//                           var plotLineOptions = {
+//        color: '#FF0000',
+//        id: plotLineId, 
+//        width: 2,
+//        value: 2.5,
+//        dashStyle: 'shortdash',
+//        zIndex: 5,
+//    };
+            var yAxis = {
+               min: 0,
+                           max:1,
+//               title: {
+//                  text: 'Population (millions)',
+//                  align: 'high'
+//               },
+//               labels: {
+////                           text: 'Average course grade',
+//                  overflow: 'justify'
+//               },
+//                plotLines: [{
+//        id: plotLineId,
+//        name: 'Average course grade',
+//        color: 'red',
+//        width: 2,
+//        value: 2.5,
+//        zIndex: 5,
+//        label: {
+//                           text: 'Average course grade',
+//                           }
+//                           plotLineOptions
+//    }]
+            };
+                           
+            var tooltip = {
+//               valueSuffix: ' millions'
+            };
+//            var plotOptions = {
+//               bar: {
+//                  dataLabels: {
+//                     enabled: false
+//                  }
+//               }
+//            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+//                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   data: [{'y': 0.034173859756083245, 'color': 'black'}, {'y': 0.2392170182925827, 'color': 'black'}, {'y': 0.08894829975949554, 'color': 'black'}, {'y': 0.038120699896926666, 'color': 'black'}, {'y': 0.08365375810714462, 'color': 'black'}, {'y': 0.27566913536573817, 'color': 'black'}, {'y': 0.09351968450323268, 'color': 'black'}, {'y': 0.14669754431879636, 'color': 'black'}],
+                   showInLegend: false,
+//                           color: 'black'
+               },
+//                           {
+//                           name: 'Course average',
+//                           data: [2,3,4,3,2,4,1,4],
+//                           type: 'line',
+//                           zIndex: 10,
+//                           color: "#A9A9A9",
+//                           marker: {
+//                           lineWidth: 3,
+//                           radius: 0,
+//                           lineColor: "#A9A9A9",
+//                           }
+//                           
+//                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_lo_contribStudent_3').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               <li>
+                   <div class="gridMap" id = "container_lo_contribStudent_4" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+//             var dup = function(n, object){
+//                 var ret = [];
+//                for (var i = 0; i<n; i++)
+//                {
+//                    ret[i] = obj;
+//                }
+//                return (ret);
+//             }
+            var plotLineId = 'meanPlotLineStudent_4';
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Average LO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_4'  
+            };
+            var xAxis = {
+               categories: ['caanalysis', 'camodeling', 'interpretresults', 'professionalism', 'pythonimplementation', 'mcmodeling', 'networkanalysis', 'networkmodeling'],
+               title: {
+                  text: null
+               }
+            };
+//                           var plotLineOptions = {
+//        color: '#FF0000',
+//        id: plotLineId, 
+//        width: 2,
+//        value: 2.5,
+//        dashStyle: 'shortdash',
+//        zIndex: 5,
+//    };
+            var yAxis = {
+               min: 0,
+                           max:1,
+//               title: {
+//                  text: 'Population (millions)',
+//                  align: 'high'
+//               },
+//               labels: {
+////                           text: 'Average course grade',
+//                  overflow: 'justify'
+//               },
+//                plotLines: [{
+//        id: plotLineId,
+//        name: 'Average course grade',
+//        color: 'red',
+//        width: 2,
+//        value: 2.5,
+//        zIndex: 5,
+//        label: {
+//                           text: 'Average course grade',
+//                           }
+//                           plotLineOptions
+//    }]
+            };
+                           
+            var tooltip = {
+//               valueSuffix: ' millions'
+            };
+//            var plotOptions = {
+//               bar: {
+//                  dataLabels: {
+//                     enabled: false
+//                  }
+//               }
+//            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+//                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   data: [{'y': 0.03395541865429042, 'color': 'black'}, {'y': 0.20373251192574254, 'color': 'black'}, {'y': 0.09721482874995478, 'color': 'black'}, {'y': 0.05116569934208146, 'color': 'black'}, {'y': 0.09516820077627151, 'color': 'black'}, {'y': 0.211655442945077, 'color': 'black'}, {'y': 0.1355701529975003, 'color': 'black'}, {'y': 0.171537744609082, 'color': 'black'}],
+                   showInLegend: false,
+//                           color: 'black'
+               },
+//                           {
+//                           name: 'Course average',
+//                           data: [2,3,4,3,2,4,1,4],
+//                           type: 'line',
+//                           zIndex: 10,
+//                           color: "#A9A9A9",
+//                           marker: {
+//                           lineWidth: 3,
+//                           radius: 0,
+//                           lineColor: "#A9A9A9",
+//                           }
+//                           
+//                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_lo_contribStudent_4').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               <li>
+                   <div class="gridMap" id = "container_lo_contribStudent_5" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+//             var dup = function(n, object){
+//                 var ret = [];
+//                for (var i = 0; i<n; i++)
+//                {
+//                    ret[i] = obj;
+//                }
+//                return (ret);
+//             }
+            var plotLineId = 'meanPlotLineStudent_5';
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Average LO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_5'  
+            };
+            var xAxis = {
+               categories: ['caanalysis', 'camodeling', 'interpretresults', 'professionalism', 'pythonimplementation', 'mcmodeling', 'networkanalysis', 'networkmodeling'],
+               title: {
+                  text: null
+               }
+            };
+//                           var plotLineOptions = {
+//        color: '#FF0000',
+//        id: plotLineId, 
+//        width: 2,
+//        value: 2.5,
+//        dashStyle: 'shortdash',
+//        zIndex: 5,
+//    };
+            var yAxis = {
+               min: 0,
+                           max:1,
+//               title: {
+//                  text: 'Population (millions)',
+//                  align: 'high'
+//               },
+//               labels: {
+////                           text: 'Average course grade',
+//                  overflow: 'justify'
+//               },
+//                plotLines: [{
+//        id: plotLineId,
+//        name: 'Average course grade',
+//        color: 'red',
+//        width: 2,
+//        value: 2.5,
+//        zIndex: 5,
+//        label: {
+//                           text: 'Average course grade',
+//                           }
+//                           plotLineOptions
+//    }]
+            };
+                           
+            var tooltip = {
+//               valueSuffix: ' millions'
+            };
+//            var plotOptions = {
+//               bar: {
+//                  dataLabels: {
+//                     enabled: false
+//                  }
+//               }
+//            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+//                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   data: [{'y': 0.02859785708779773, 'color': 'black'}, {'y': 0.2532953056347799, 'color': 'black'}, {'y': 0.10168126964550306, 'color': 'black'}, {'y': 0.0472091609068407, 'color': 'black'}, {'y': 0.07444521527617187, 'color': 'black'}, {'y': 0.2505717001978468, 'color': 'black'}, {'y': 0.11593309180605874, 'color': 'black'}, {'y': 0.12826639944500115, 'color': 'black'}],
+                   showInLegend: false,
+//                           color: 'black'
+               },
+//                           {
+//                           name: 'Course average',
+//                           data: [2,3,4,3,2,4,1,4],
+//                           type: 'line',
+//                           zIndex: 10,
+//                           color: "#A9A9A9",
+//                           marker: {
+//                           lineWidth: 3,
+//                           radius: 0,
+//                           lineColor: "#A9A9A9",
+//                           }
+//                           
+//                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_lo_contribStudent_5').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               
+           </ul>
+       </div>
+       </div>
+       <div id="CO_average" class="tabcontent">
+           <div class="reduce">
+           <ul>
+               
+               <li>
+                   <div class="gridMap" id = "container_co_avgStudent_1" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+            var plotLineId = 'meanPlotLineStudent_1';
+            var chart = {
+               type: 'bar',
+                height: 600
+            };
+            var title = {
+               text: 'Average CO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_1'  
+            };
+            var xAxis = {
+               categories: ['Cellular Automata', 'MonteCarlo', 'Networks', 'Simulations'],
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+                           max:5,
+            };
+                           
+            var tooltip = {
+                           formatter: function () {
+            if (this.series.name == 'LO average'){
+                return this.x.concat(': ', parseFloat(this.point.y).toFixed(2))
+            } else {
+                return '<b>Course average: </b>'.concat(parseFloat(this.point.y).toFixed(2))
+            }
+             ;
+        }
+            };
+                           
+            var legend = {
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+                   name: 'LO average',
+                   data: [{'y': 3.4545454545454546, 'color': '#56A371'}, {'y': 3.5, 'color': '#56A371'}, {'y': 2.7142857142857144, 'color': '#DB883A'}, {'y': 3.111111111111111, 'color': '#56A371'}],
+                   showInLegend: false,
+                           states: {
+            inactive: {
+                opacity: 1
+            }
+        },
+               },
+                           {
+                           name: 'Course average',
+                           data: [3.19498556998557, 3.19498556998557, 3.19498556998557, 3.19498556998557],
+                           type: 'line',
+                           zIndex: 10,
+                           color: "black",
+                           marker: {
+                           lineWidth: 3,
+                           radius: 0,
+                           lineColor: "black",
+                           },
+               
+                           states: {
+                                hover: {
+                                enabled: false
+                                },
+                           inactive: {
+                opacity: 1
+            }
+                                },
+                           
+                           
+                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_co_avgStudent_1').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               <li>
+                   <div class="gridMap" id = "container_co_avgStudent_2" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+            var plotLineId = 'meanPlotLineStudent_2';
+            var chart = {
+               type: 'bar',
+                height: 600
+            };
+            var title = {
+               text: 'Average CO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_2'  
+            };
+            var xAxis = {
+               categories: ['Cellular Automata', 'MonteCarlo', 'Networks', 'Simulations'],
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+                           max:5,
+            };
+                           
+            var tooltip = {
+                           formatter: function () {
+            if (this.series.name == 'LO average'){
+                return this.x.concat(': ', parseFloat(this.point.y).toFixed(2))
+            } else {
+                return '<b>Course average: </b>'.concat(parseFloat(this.point.y).toFixed(2))
+            }
+             ;
+        }
+            };
+                           
+            var legend = {
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+                   name: 'LO average',
+                   data: [{'y': 3.0, 'color': '#56A371'}, {'y': 3.8333333333333335, 'color': '#56A371'}, {'y': 2.3793103448275863, 'color': '#DB883A'}, {'y': 2.8450704225352115, 'color': '#DB883A'}],
+                   showInLegend: false,
+                           states: {
+            inactive: {
+                opacity: 1
+            }
+        },
+               },
+                           {
+                           name: 'Course average',
+                           data: [3.014428525174033, 3.014428525174033, 3.014428525174033, 3.014428525174033],
+                           type: 'line',
+                           zIndex: 10,
+                           color: "black",
+                           marker: {
+                           lineWidth: 3,
+                           radius: 0,
+                           lineColor: "black",
+                           },
+               
+                           states: {
+                                hover: {
+                                enabled: false
+                                },
+                           inactive: {
+                opacity: 1
+            }
+                                },
+                           
+                           
+                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_co_avgStudent_2').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               <li>
+                   <div class="gridMap" id = "container_co_avgStudent_3" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+            var plotLineId = 'meanPlotLineStudent_3';
+            var chart = {
+               type: 'bar',
+                height: 600
+            };
+            var title = {
+               text: 'Average CO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_3'  
+            };
+            var xAxis = {
+               categories: ['Cellular Automata', 'MonteCarlo', 'Networks', 'Simulations'],
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+                           max:5,
+            };
+                           
+            var tooltip = {
+                           formatter: function () {
+            if (this.series.name == 'LO average'){
+                return this.x.concat(': ', parseFloat(this.point.y).toFixed(2))
+            } else {
+                return '<b>Course average: </b>'.concat(parseFloat(this.point.y).toFixed(2))
+            }
+             ;
+        }
+            };
+                           
+            var legend = {
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+                   name: 'LO average',
+                   data: [{'y': 3.6363636363636362, 'color': '#56A371'}, {'y': 3.6666666666666665, 'color': '#56A371'}, {'y': 3.1951219512195124, 'color': '#56A371'}, {'y': 2.8028169014084505, 'color': '#DB883A'}],
+                   showInLegend: false,
+                           states: {
+            inactive: {
+                opacity: 1
+            }
+        },
+               },
+                           {
+                           name: 'Course average',
+                           data: [3.3252422889145663, 3.3252422889145663, 3.3252422889145663, 3.3252422889145663],
+                           type: 'line',
+                           zIndex: 10,
+                           color: "black",
+                           marker: {
+                           lineWidth: 3,
+                           radius: 0,
+                           lineColor: "black",
+                           },
+               
+                           states: {
+                                hover: {
+                                enabled: false
+                                },
+                           inactive: {
+                opacity: 1
+            }
+                                },
+                           
+                           
+                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_co_avgStudent_3').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               <li>
+                   <div class="gridMap" id = "container_co_avgStudent_4" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+            var plotLineId = 'meanPlotLineStudent_4';
+            var chart = {
+               type: 'bar',
+                height: 600
+            };
+            var title = {
+               text: 'Average CO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_4'  
+            };
+            var xAxis = {
+               categories: ['Cellular Automata', 'MonteCarlo', 'Networks', 'Simulations'],
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+                           max:5,
+            };
+                           
+            var tooltip = {
+                           formatter: function () {
+            if (this.series.name == 'LO average'){
+                return this.x.concat(': ', parseFloat(this.point.y).toFixed(2))
+            } else {
+                return '<b>Course average: </b>'.concat(parseFloat(this.point.y).toFixed(2))
+            }
+             ;
+        }
+            };
+                           
+            var legend = {
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+                   name: 'LO average',
+                   data: [{'y': 3.1818181818181817, 'color': '#56A371'}, {'y': 2.8333333333333335, 'color': '#DB883A'}, {'y': 4.111111111111111, 'color': '#3473B6'}, {'y': 3.26027397260274, 'color': '#56A371'}],
+                   showInLegend: false,
+                           states: {
+            inactive: {
+                opacity: 1
+            }
+        },
+               },
+                           {
+                           name: 'Course average',
+                           data: [3.3466341497163414, 3.3466341497163414, 3.3466341497163414, 3.3466341497163414],
+                           type: 'line',
+                           zIndex: 10,
+                           color: "black",
+                           marker: {
+                           lineWidth: 3,
+                           radius: 0,
+                           lineColor: "black",
+                           },
+               
+                           states: {
+                                hover: {
+                                enabled: false
+                                },
+                           inactive: {
+                opacity: 1
+            }
+                                },
+                           
+                           
+                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_co_avgStudent_4').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               <li>
+                   <div class="gridMap" id = "container_co_avgStudent_5" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+            var plotLineId = 'meanPlotLineStudent_5';
+            var chart = {
+               type: 'bar',
+                height: 600
+            };
+            var title = {
+               text: 'Average CO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_5'  
+            };
+            var xAxis = {
+               categories: ['Cellular Automata', 'MonteCarlo', 'Networks', 'Simulations'],
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+                           max:5,
+            };
+                           
+            var tooltip = {
+                           formatter: function () {
+            if (this.series.name == 'LO average'){
+                return this.x.concat(': ', parseFloat(this.point.y).toFixed(2))
+            } else {
+                return '<b>Course average: </b>'.concat(parseFloat(this.point.y).toFixed(2))
+            }
+             ;
+        }
+            };
+                           
+            var legend = {
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+                   name: 'LO average',
+                   data: [{'y': 4.3125, 'color': '#3473B6'}, {'y': 3.8333333333333335, 'color': '#56A371'}, {'y': 3.7358490566037736, 'color': '#56A371'}, {'y': 3.4166666666666665, 'color': '#56A371'}],
+                   showInLegend: false,
+                           states: {
+            inactive: {
+                opacity: 1
+            }
+        },
+               },
+                           {
+                           name: 'Course average',
+                           data: [3.8245872641509435, 3.8245872641509435, 3.8245872641509435, 3.8245872641509435],
+                           type: 'line',
+                           zIndex: 10,
+                           color: "black",
+                           marker: {
+                           lineWidth: 3,
+                           radius: 0,
+                           lineColor: "black",
+                           },
+               
+                           states: {
+                                hover: {
+                                enabled: false
+                                },
+                           inactive: {
+                opacity: 1
+            }
+                                },
+                           
+                           
+                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_co_avgStudent_5').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               
+           </ul>
+       </div>
+       </div>
+<div id="LO_average" class="tabcontent">
+  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+      <script language = "JavaScript">
+        $(document).ready(function() {  
+            var chart = {
+               type: 'bar',
+                zoomType: 'xy'
+            };
+            var title = {
+               text: 'Range of LO averages for all students'
+            };
+            var subtitle = {
+//               text: 'Source: Wikipedia.org'  
+            };
+            var xAxis = {
+               categories: ['caanalysis', 'camodeling', 'interpretresults', 'mcmodeling', 'networkanalysis', 'networkmodeling', 'professionalism', 'pythonimplementation'],
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+                max:5,
+               title: {
+                  text: null,
+//                  align: 'high'
+               },
+//               labels: {
+//                  overflow: 'justify'
+//               }
+            };
+            var tooltip = {
+                          shared: true
+                          };
+//             
+           
+            var plotOptions = {
+               bar: {
+                  dataLabels: {
+                     enabled: true
+                  }
+               }
+            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+                  name: 'Mean',
+                   type: 'spline',
+                          lineWidth: '0px',
+                          marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                          fillColor: 'black',
+                        radius: 3,
+                        states: {
+                            hover: {
+                                enabled: true,
+                                lineWidth: 0
+                            }
+                        }
+                    },
+                   color: 'white',
+                   showInLegend: false,
+                   data: [2.8, 3.6412698412698417, 3.172413793103449, 3.5333333333333337, 3.088842105263158, 3.3483441558441562, 3.5142857142857147, 2.7933990147783248],
+                    tooltip: {
+            pointFormat: '<span style="font-weight: bold">{series.name}</span>: {point.y:.2f}<br/> '
+        }
+                
+                   
+                    
+               },
+                {
+                          name: 'Range',
+                          type: 'errorbar',
+                    data: [[2.0, 3.5], [3.111111111111111, 4.428571428571429], [2.7586206896551726, 3.8620689655172415], [2.8333333333333335, 3.8333333333333335], [2.1538461538461537, 3.769230769230769], [2.4, 4.428571428571429], [2.5714285714285716, 4.428571428571429], [2.142857142857143, 3.1724137931034484]],
+                    
+                    
+                          tooltip: {
+            pointFormat: '<b>Range:</b> {point.low:.2f}-{point.high:.2f}'
+        }
+                }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container').highcharts(json);
+         });
+      </script>
+    
+    <div class="reduce">
+           <ul>
+               
+               <li>
+                   <div class="gridMap" id = "container_lo_avgStudent_1" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+//             var dup = function(n, object){
+//                 var ret = [];
+//                for (var i = 0; i<n; i++)
+//                {
+//                    ret[i] = obj;
+//                }
+//                return (ret);
+//             }
+            var plotLineId = 'meanPlotLineStudent_1';
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Average LO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_1'  
+            };
+            var xAxis = {
+               categories: ['caanalysis', 'camodeling', 'interpretresults', 'mcmodeling', 'networkanalysis', 'networkmodeling', 'professionalism', 'pythonimplementation'],
+               title: {
+                  text: null
+               }
+            };
+//                           var plotLineOptions = {
+//        color: '#FF0000',
+//        id: plotLineId, 
+//        width: 2,
+//        value: 2.5,
+//        dashStyle: 'shortdash',
+//        zIndex: 5,
+//    };
+            var yAxis = {
+               min: 0,
+                           max:5,
+//               title: {
+//                  text: 'Population (millions)',
+//                  align: 'high'
+//               },
+//               labels: {
+////                           text: 'Average course grade',
+//                  overflow: 'justify'
+//               },
+//                plotLines: [{
+//        id: plotLineId,
+//        name: 'Average course grade',
+//        color: 'red',
+//        width: 2,
+//        value: 2.5,
+//        zIndex: 5,
+//        label: {
+//                           text: 'Average course grade',
+//                           }
+//                           plotLineOptions
+//    }]
+            };
+                           
+            var tooltip = {
+//               valueSuffix: ' millions'
+            };
+//            var plotOptions = {
+//               bar: {
+//                  dataLabels: {
+//                     enabled: false
+//                  }
+//               }
+//            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+//                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   data: [{'y': 3.5, 'color': '#56A371'}, {'y': 3.4444444444444446, 'color': '#56A371'}, {'y': 2.9655172413793105, 'color': '#DB883A'}, {'y': 3.5, 'color': '#56A371'}, {'y': 3.076923076923077, 'color': '#56A371'}, {'y': 2.4, 'color': '#DB883A'}, {'y': 3.2857142857142856, 'color': '#56A371'}, {'y': 3.1724137931034484, 'color': '#56A371'}],
+                   showInLegend: false,
+               },
+//                           {
+//                           name: 'Course average',
+//                           data: [2,3,4,3,2,4,1,4],
+//                           type: 'line',
+//                           zIndex: 10,
+//                           color: "#A9A9A9",
+//                           marker: {
+//                           lineWidth: 3,
+//                           radius: 0,
+//                           lineColor: "#A9A9A9",
+//                           }
+//                           
+//                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_lo_avgStudent_1').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               <li>
+                   <div class="gridMap" id = "container_lo_avgStudent_2" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+//             var dup = function(n, object){
+//                 var ret = [];
+//                for (var i = 0; i<n; i++)
+//                {
+//                    ret[i] = obj;
+//                }
+//                return (ret);
+//             }
+            var plotLineId = 'meanPlotLineStudent_2';
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Average LO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_2'  
+            };
+            var xAxis = {
+               categories: ['caanalysis', 'camodeling', 'interpretresults', 'mcmodeling', 'networkanalysis', 'networkmodeling', 'professionalism', 'pythonimplementation'],
+               title: {
+                  text: null
+               }
+            };
+//                           var plotLineOptions = {
+//        color: '#FF0000',
+//        id: plotLineId, 
+//        width: 2,
+//        value: 2.5,
+//        dashStyle: 'shortdash',
+//        zIndex: 5,
+//    };
+            var yAxis = {
+               min: 0,
+                           max:5,
+//               title: {
+//                  text: 'Population (millions)',
+//                  align: 'high'
+//               },
+//               labels: {
+////                           text: 'Average course grade',
+//                  overflow: 'justify'
+//               },
+//                plotLines: [{
+//        id: plotLineId,
+//        name: 'Average course grade',
+//        color: 'red',
+//        width: 2,
+//        value: 2.5,
+//        zIndex: 5,
+//        label: {
+//                           text: 'Average course grade',
+//                           }
+//                           plotLineOptions
+//    }]
+            };
+                           
+            var tooltip = {
+//               valueSuffix: ' millions'
+            };
+//            var plotOptions = {
+//               bar: {
+//                  dataLabels: {
+//                     enabled: false
+//                  }
+//               }
+//            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+//                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   data: [{'y': 2.0, 'color': '#DB883A'}, {'y': 3.111111111111111, 'color': '#56A371'}, {'y': 2.7586206896551726, 'color': '#DB883A'}, {'y': 3.8333333333333335, 'color': '#56A371'}, {'y': 2.1538461538461537, 'color': '#DB883A'}, {'y': 2.5625, 'color': '#DB883A'}, {'y': 4.428571428571429, 'color': '#3473B6'}, {'y': 2.142857142857143, 'color': '#DB883A'}],
+                   showInLegend: false,
+               },
+//                           {
+//                           name: 'Course average',
+//                           data: [2,3,4,3,2,4,1,4],
+//                           type: 'line',
+//                           zIndex: 10,
+//                           color: "#A9A9A9",
+//                           marker: {
+//                           lineWidth: 3,
+//                           radius: 0,
+//                           lineColor: "#A9A9A9",
+//                           }
+//                           
+//                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_lo_avgStudent_2').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               <li>
+                   <div class="gridMap" id = "container_lo_avgStudent_3" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+//             var dup = function(n, object){
+//                 var ret = [];
+//                for (var i = 0; i<n; i++)
+//                {
+//                    ret[i] = obj;
+//                }
+//                return (ret);
+//             }
+            var plotLineId = 'meanPlotLineStudent_3';
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Average LO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_3'  
+            };
+            var xAxis = {
+               categories: ['caanalysis', 'camodeling', 'interpretresults', 'mcmodeling', 'networkanalysis', 'networkmodeling', 'professionalism', 'pythonimplementation'],
+               title: {
+                  text: null
+               }
+            };
+//                           var plotLineOptions = {
+//        color: '#FF0000',
+//        id: plotLineId, 
+//        width: 2,
+//        value: 2.5,
+//        dashStyle: 'shortdash',
+//        zIndex: 5,
+//    };
+            var yAxis = {
+               min: 0,
+                           max:5,
+//               title: {
+//                  text: 'Population (millions)',
+//                  align: 'high'
+//               },
+//               labels: {
+////                           text: 'Average course grade',
+//                  overflow: 'justify'
+//               },
+//                plotLines: [{
+//        id: plotLineId,
+//        name: 'Average course grade',
+//        color: 'red',
+//        width: 2,
+//        value: 2.5,
+//        zIndex: 5,
+//        label: {
+//                           text: 'Average course grade',
+//                           }
+//                           plotLineOptions
+//    }]
+            };
+                           
+            var tooltip = {
+//               valueSuffix: ' millions'
+            };
+//            var plotOptions = {
+//               bar: {
+//                  dataLabels: {
+//                     enabled: false
+//                  }
+//               }
+//            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+//                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   data: [{'y': 2.5, 'color': '#DB883A'}, {'y': 3.888888888888889, 'color': '#56A371'}, {'y': 3.0, 'color': '#56A371'}, {'y': 3.6666666666666665, 'color': '#56A371'}, {'y': 2.6842105263157894, 'color': '#DB883A'}, {'y': 3.6363636363636362, 'color': '#56A371'}, {'y': 2.5714285714285716, 'color': '#DB883A'}, {'y': 2.7241379310344827, 'color': '#DB883A'}],
+                   showInLegend: false,
+               },
+//                           {
+//                           name: 'Course average',
+//                           data: [2,3,4,3,2,4,1,4],
+//                           type: 'line',
+//                           zIndex: 10,
+//                           color: "#A9A9A9",
+//                           marker: {
+//                           lineWidth: 3,
+//                           radius: 0,
+//                           lineColor: "#A9A9A9",
+//                           }
+//                           
+//                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_lo_avgStudent_3').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               <li>
+                   <div class="gridMap" id = "container_lo_avgStudent_4" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+//             var dup = function(n, object){
+//                 var ret = [];
+//                for (var i = 0; i<n; i++)
+//                {
+//                    ret[i] = obj;
+//                }
+//                return (ret);
+//             }
+            var plotLineId = 'meanPlotLineStudent_4';
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Average LO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_4'  
+            };
+            var xAxis = {
+               categories: ['caanalysis', 'camodeling', 'interpretresults', 'mcmodeling', 'networkanalysis', 'networkmodeling', 'professionalism', 'pythonimplementation'],
+               title: {
+                  text: null
+               }
+            };
+//                           var plotLineOptions = {
+//        color: '#FF0000',
+//        id: plotLineId, 
+//        width: 2,
+//        value: 2.5,
+//        dashStyle: 'shortdash',
+//        zIndex: 5,
+//    };
+            var yAxis = {
+               min: 0,
+                           max:5,
+//               title: {
+//                  text: 'Population (millions)',
+//                  align: 'high'
+//               },
+//               labels: {
+////                           text: 'Average course grade',
+//                  overflow: 'justify'
+//               },
+//                plotLines: [{
+//        id: plotLineId,
+//        name: 'Average course grade',
+//        color: 'red',
+//        width: 2,
+//        value: 2.5,
+//        zIndex: 5,
+//        label: {
+//                           text: 'Average course grade',
+//                           }
+//                           plotLineOptions
+//    }]
+            };
+                           
+            var tooltip = {
+//               valueSuffix: ' millions'
+            };
+//            var plotOptions = {
+//               bar: {
+//                  dataLabels: {
+//                     enabled: false
+//                  }
+//               }
+//            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+//                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   data: [{'y': 2.5, 'color': '#DB883A'}, {'y': 3.3333333333333335, 'color': '#56A371'}, {'y': 3.2758620689655173, 'color': '#56A371'}, {'y': 2.8333333333333335, 'color': '#DB883A'}, {'y': 3.769230769230769, 'color': '#56A371'}, {'y': 4.428571428571429, 'color': '#3473B6'}, {'y': 3.5714285714285716, 'color': '#56A371'}, {'y': 3.1, 'color': '#56A371'}],
+                   showInLegend: false,
+               },
+//                           {
+//                           name: 'Course average',
+//                           data: [2,3,4,3,2,4,1,4],
+//                           type: 'line',
+//                           zIndex: 10,
+//                           color: "#A9A9A9",
+//                           marker: {
+//                           lineWidth: 3,
+//                           radius: 0,
+//                           lineColor: "#A9A9A9",
+//                           }
+//                           
+//                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_lo_avgStudent_4').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               <li>
+                   <div class="gridMap" id = "container_lo_avgStudent_5" ></div>
+                   <script language = "JavaScript">
+         
+         $(document).ready(function() { 
+//             var dup = function(n, object){
+//                 var ret = [];
+//                for (var i = 0; i<n; i++)
+//                {
+//                    ret[i] = obj;
+//                }
+//                return (ret);
+//             }
+            var plotLineId = 'meanPlotLineStudent_5';
+            var chart = {
+               type: 'bar'
+            };
+            var title = {
+               text: 'Average LO Scores'   
+            };
+            var subtitle = {
+               text: 'for Student_5'  
+            };
+            var xAxis = {
+               categories: ['caanalysis', 'camodeling', 'interpretresults', 'mcmodeling', 'networkanalysis', 'networkmodeling', 'professionalism', 'pythonimplementation'],
+               title: {
+                  text: null
+               }
+            };
+//                           var plotLineOptions = {
+//        color: '#FF0000',
+//        id: plotLineId, 
+//        width: 2,
+//        value: 2.5,
+//        dashStyle: 'shortdash',
+//        zIndex: 5,
+//    };
+            var yAxis = {
+               min: 0,
+                           max:5,
+//               title: {
+//                  text: 'Population (millions)',
+//                  align: 'high'
+//               },
+//               labels: {
+////                           text: 'Average course grade',
+//                  overflow: 'justify'
+//               },
+//                plotLines: [{
+//        id: plotLineId,
+//        name: 'Average course grade',
+//        color: 'red',
+//        width: 2,
+//        value: 2.5,
+//        zIndex: 5,
+//        label: {
+//                           text: 'Average course grade',
+//                           }
+//                           plotLineOptions
+//    }]
+            };
+                           
+            var tooltip = {
+//               valueSuffix: ' millions'
+            };
+//            var plotOptions = {
+//               bar: {
+//                  dataLabels: {
+//                     enabled: false
+//                  }
+//               }
+//            };
+            var legend = {
+//               layout: 'vertical',
+//               align: 'right',
+//               verticalAlign: 'top',
+//               x: -40,
+//               y: 100,
+//               floating: true,
+//               borderWidth: 1,
+//               
+//               backgroundColor: (
+//                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+//                     '#FFFFFF'),
+//               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+//                  name: 'Year 1800',
+//                  data: [107, 31, 635, 203, 2],
+//                   data: [
+//                       {y: 107, color:'red'},
+//                       {y:31, color:'red'},
+//                       {y:635},
+//                       {y:203, color:'green'},
+//                       {y:2}
+//                   ],
+//                   data: [{'y': 107, 'color': 'red'}, {'y': 31, 'color': 'red'}, {'y': 635}, {'y': 203, 'color': 'green'}, {'y': 2}],
+                   data: [{'y': 3.5, 'color': '#56A371'}, {'y': 4.428571428571429, 'color': '#3473B6'}, {'y': 3.8620689655172415, 'color': '#56A371'}, {'y': 3.8333333333333335, 'color': '#56A371'}, {'y': 3.76, 'color': '#56A371'}, {'y': 3.7142857142857144, 'color': '#56A371'}, {'y': 3.7142857142857144, 'color': '#56A371'}, {'y': 2.8275862068965516, 'color': '#DB883A'}],
+                   showInLegend: false,
+               },
+//                           {
+//                           name: 'Course average',
+//                           data: [2,3,4,3,2,4,1,4],
+//                           type: 'line',
+//                           zIndex: 10,
+//                           color: "#A9A9A9",
+//                           marker: {
+//                           lineWidth: 3,
+//                           radius: 0,
+//                           lineColor: "#A9A9A9",
+//                           }
+//                           
+//                           }
+            ];
+      
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle; 
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+//            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#container_lo_avgStudent_5').highcharts(json);
+         });
+      
+      </script>    
+               </li>
+               
+               
+           </ul>
+       </div>
+</div>
+       
+       <div id="LO_evolution" class="tabcontent">
+       <div class="reduce">
+           <ul>
+           
+               <li>
+      <div class = "GridMap" id = "container_lo_evoStudent_1" ></div>
+      <script language = "JavaScript">
+         $(document).ready(function() {  
+            var chart = {
+               type: 'line',
+                height: 600
+            }; 
+            var title = {
+               text: 'Evolution of Average LO Score'   
+            };
+            var subtitle = {
+               text: 'for Student_1'
+            };
+            var xAxis = {
+               type: 'datetime',
+               title: {
+                  text: 'Date'
+               }
+            };
+            var yAxis = {
+               min: 0,
+                max:5
+            };
+            var tooltip = {
+               headerFormat: '<b>{series.name}</b><br>',
+               pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+            };
+            var plotOptions = {
+               spline: {
+                  marker: {
+                     enabled: true
+                  }
+               }
+            };
+             var series = [{'name': 'caanalysis', 'visible': false, 'data': [[Date.UTC(2020, 1, 7), 5.0], [Date.UTC(2020, 1, 8), 3.5]]}, {'name': 'camodeling', 'visible': false, 'data': [[Date.UTC(2020, 1, 5), 5.0], [Date.UTC(2020, 1, 20), 4.5], [Date.UTC(2020, 1, 27), 4.333333333333333], [Date.UTC(2020, 3, 4), 3.4444444444444446]]}, {'name': 'interpretresults', 'visible': false, 'data': [[Date.UTC(2020, 1, 26), 4.0], [Date.UTC(2020, 2, 10), 4.0], [Date.UTC(2020, 2, 17), 3.7777777777777777], [Date.UTC(2020, 2, 18), 3.066666666666667], [Date.UTC(2020, 2, 22), 3.1875], [Date.UTC(2020, 3, 9), 3.2941176470588234], [Date.UTC(2020, 3, 24), 3.4782608695652173], [Date.UTC(2020, 4, 5), 2.9655172413793105]]}, {'name': 'mcmodeling', 'visible': false, 'data': [[Date.UTC(2020, 3, 5), 3.0], [Date.UTC(2020, 3, 14), 2.5], [Date.UTC(2020, 3, 26), 3.0], [Date.UTC(2020, 3, 30), 3.4], [Date.UTC(2020, 4, 15), 3.5]]}, {'name': 'networkanalysis', 'visible': true, 'data': [[Date.UTC(2020, 3, 9), 4.0], [Date.UTC(2020, 3, 27), 2.2857142857142856], [Date.UTC(2020, 4, 11), 3.076923076923077]]}, {'name': 'networkmodeling', 'visible': true, 'data': [[Date.UTC(2020, 2, 1), 3.0], [Date.UTC(2020, 2, 24), 4.0], [Date.UTC(2020, 3, 14), 2.0], [Date.UTC(2020, 3, 29), 2.4]]}, {'name': 'professionalism', 'visible': false, 'data': [[Date.UTC(2020, 1, 2), 5.0], [Date.UTC(2020, 2, 18), 4.25], [Date.UTC(2020, 3, 5), 3.2857142857142856]]}, {'name': 'pythonimplementation', 'visible': false, 'data': [[Date.UTC(2020, 1, 4), 4.0], [Date.UTC(2020, 1, 8), 4.5], [Date.UTC(2020, 1, 10), 4.25], [Date.UTC(2020, 2, 19), 3.5], [Date.UTC(2020, 2, 27), 3.6875], [Date.UTC(2020, 2, 31), 3.6470588235294117], [Date.UTC(2020, 3, 18), 3.4782608695652173], [Date.UTC(2020, 4, 16), 3.1724137931034484]]}];
+                           var credits = {
+               enabled: false
+            };
+
+            
+            var json = {};
+            json.chart = chart;
+            json.title = title;
+            json.subtitle = subtitle;
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.credits = credits;
+            $('#container_lo_evoStudent_1').highcharts(json);
+         });
+      </script>
+               </li>
+           
+               <li>
+      <div class = "GridMap" id = "container_lo_evoStudent_2" ></div>
+      <script language = "JavaScript">
+         $(document).ready(function() {  
+            var chart = {
+               type: 'line',
+                height: 600
+            }; 
+            var title = {
+               text: 'Evolution of Average LO Score'   
+            };
+            var subtitle = {
+               text: 'for Student_2'
+            };
+            var xAxis = {
+               type: 'datetime',
+               title: {
+                  text: 'Date'
+               }
+            };
+            var yAxis = {
+               min: 0,
+                max:5
+            };
+            var tooltip = {
+               headerFormat: '<b>{series.name}</b><br>',
+               pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+            };
+            var plotOptions = {
+               spline: {
+                  marker: {
+                     enabled: true
+                  }
+               }
+            };
+             var series = [{'name': 'caanalysis', 'visible': false, 'data': [[Date.UTC(2020, 1, 14), 2.0]]}, {'name': 'camodeling', 'visible': false, 'data': [[Date.UTC(2020, 1, 14), 4.0], [Date.UTC(2020, 1, 22), 3.0], [Date.UTC(2020, 1, 24), 3.3333333333333335], [Date.UTC(2020, 2, 7), 3.111111111111111]]}, {'name': 'interpretresults', 'visible': false, 'data': [[Date.UTC(2020, 1, 13), 5.0], [Date.UTC(2020, 2, 8), 3.5], [Date.UTC(2020, 2, 11), 3.2222222222222223], [Date.UTC(2020, 2, 13), 3.1], [Date.UTC(2020, 2, 21), 2.3125], [Date.UTC(2020, 2, 31), 2.235294117647059], [Date.UTC(2020, 3, 23), 2.9565217391304346], [Date.UTC(2020, 3, 25), 2.7586206896551726]]}, {'name': 'mcmodeling', 'visible': false, 'data': [[Date.UTC(2020, 3, 12), 3.0], [Date.UTC(2020, 3, 19), 4.0], [Date.UTC(2020, 3, 26), 4.333333333333333], [Date.UTC(2020, 3, 28), 4.5], [Date.UTC(2020, 4, 3), 4.2], [Date.UTC(2020, 4, 11), 3.8333333333333335]]}, {'name': 'networkanalysis', 'visible': true, 'data': [[Date.UTC(2020, 2, 9), 4.0], [Date.UTC(2020, 3, 28), 1.4285714285714286], [Date.UTC(2020, 4, 8), 2.1538461538461537]]}, {'name': 'networkmodeling', 'visible': true, 'data': [[Date.UTC(2020, 2, 8), 3.0], [Date.UTC(2020, 2, 11), 2.5], [Date.UTC(2020, 2, 28), 2.6666666666666665], [Date.UTC(2020, 2, 31), 2.75], [Date.UTC(2020, 3, 20), 2.9], [Date.UTC(2020, 4, 4), 2.5625]]}, {'name': 'professionalism', 'visible': false, 'data': [[Date.UTC(2020, 1, 22), 4.0], [Date.UTC(2020, 2, 24), 4.75], [Date.UTC(2020, 4, 21), 4.428571428571429]]}, {'name': 'pythonimplementation', 'visible': false, 'data': [[Date.UTC(2020, 1, 6), 1.0], [Date.UTC(2020, 1, 11), 2.0], [Date.UTC(2020, 1, 23), 3.0], [Date.UTC(2020, 2, 11), 3.6], [Date.UTC(2020, 2, 26), 2.625], [Date.UTC(2020, 4, 1), 2.1818181818181817], [Date.UTC(2020, 4, 4), 2.142857142857143]]}];
+                           var credits = {
+               enabled: false
+            };
+
+            
+            var json = {};
+            json.chart = chart;
+            json.title = title;
+            json.subtitle = subtitle;
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.credits = credits;
+            $('#container_lo_evoStudent_2').highcharts(json);
+         });
+      </script>
+               </li>
+           
+               <li>
+      <div class = "GridMap" id = "container_lo_evoStudent_3" ></div>
+      <script language = "JavaScript">
+         $(document).ready(function() {  
+            var chart = {
+               type: 'line',
+                height: 600
+            }; 
+            var title = {
+               text: 'Evolution of Average LO Score'   
+            };
+            var subtitle = {
+               text: 'for Student_3'
+            };
+            var xAxis = {
+               type: 'datetime',
+               title: {
+                  text: 'Date'
+               }
+            };
+            var yAxis = {
+               min: 0,
+                max:5
+            };
+            var tooltip = {
+               headerFormat: '<b>{series.name}</b><br>',
+               pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+            };
+            var plotOptions = {
+               spline: {
+                  marker: {
+                     enabled: true
+                  }
+               }
+            };
+             var series = [{'name': 'caanalysis', 'visible': false, 'data': [[Date.UTC(2020, 1, 17), 4.0], [Date.UTC(2020, 1, 26), 2.5]]}, {'name': 'camodeling', 'visible': false, 'data': [[Date.UTC(2020, 1, 17), 3.0], [Date.UTC(2020, 1, 22), 3.0], [Date.UTC(2020, 2, 6), 3.6666666666666665], [Date.UTC(2020, 2, 24), 3.888888888888889]]}, {'name': 'interpretresults', 'visible': false, 'data': [[Date.UTC(2020, 1, 22), 3.0], [Date.UTC(2020, 2, 5), 3.75], [Date.UTC(2020, 2, 18), 3.5555555555555554], [Date.UTC(2020, 2, 26), 2.933333333333333], [Date.UTC(2020, 3, 10), 3.0], [Date.UTC(2020, 4, 5), 3.0], [Date.UTC(2020, 4, 8), 3.0]]}, {'name': 'mcmodeling', 'visible': false, 'data': [[Date.UTC(2020, 3, 5), 3.0], [Date.UTC(2020, 3, 14), 4.0], [Date.UTC(2020, 3, 16), 3.6666666666666665], [Date.UTC(2020, 3, 24), 3.5], [Date.UTC(2020, 3, 30), 3.4], [Date.UTC(2020, 4, 8), 3.6666666666666665]]}, {'name': 'networkanalysis', 'visible': true, 'data': [[Date.UTC(2020, 2, 15), 3.0], [Date.UTC(2020, 3, 22), 1.2857142857142858], [Date.UTC(2020, 4, 3), 1.6153846153846154], [Date.UTC(2020, 4, 13), 2.6842105263157894]]}, {'name': 'networkmodeling', 'visible': true, 'data': [[Date.UTC(2020, 1, 25), 3.0], [Date.UTC(2020, 2, 10), 4.0], [Date.UTC(2020, 2, 18), 3.3333333333333335], [Date.UTC(2020, 2, 24), 3.5], [Date.UTC(2020, 3, 24), 3.2], [Date.UTC(2020, 3, 29), 3.5], [Date.UTC(2020, 4, 7), 3.6363636363636362]]}, {'name': 'professionalism', 'visible': false, 'data': [[Date.UTC(2020, 1, 10), 3.0], [Date.UTC(2020, 3, 2), 3.0], [Date.UTC(2020, 3, 24), 2.5714285714285716]]}, {'name': 'pythonimplementation', 'visible': false, 'data': [[Date.UTC(2020, 1, 13), 5.0], [Date.UTC(2020, 1, 14), 3.6666666666666665], [Date.UTC(2020, 1, 18), 3.5], [Date.UTC(2020, 2, 17), 2.0], [Date.UTC(2020, 2, 30), 2.272727272727273], [Date.UTC(2020, 3, 5), 2.8823529411764706], [Date.UTC(2020, 4, 1), 2.652173913043478], [Date.UTC(2020, 4, 11), 2.7241379310344827]]}];
+                           var credits = {
+               enabled: false
+            };
+
+            
+            var json = {};
+            json.chart = chart;
+            json.title = title;
+            json.subtitle = subtitle;
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.credits = credits;
+            $('#container_lo_evoStudent_3').highcharts(json);
+         });
+      </script>
+               </li>
+           
+               <li>
+      <div class = "GridMap" id = "container_lo_evoStudent_4" ></div>
+      <script language = "JavaScript">
+         $(document).ready(function() {  
+            var chart = {
+               type: 'line',
+                height: 600
+            }; 
+            var title = {
+               text: 'Evolution of Average LO Score'   
+            };
+            var subtitle = {
+               text: 'for Student_4'
+            };
+            var xAxis = {
+               type: 'datetime',
+               title: {
+                  text: 'Date'
+               }
+            };
+            var yAxis = {
+               min: 0,
+                max:5
+            };
+            var tooltip = {
+               headerFormat: '<b>{series.name}</b><br>',
+               pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+            };
+            var plotOptions = {
+               spline: {
+                  marker: {
+                     enabled: true
+                  }
+               }
+            };
+             var series = [{'name': 'caanalysis', 'visible': false, 'data': [[Date.UTC(2020, 1, 23), 1.0], [Date.UTC(2020, 1, 26), 2.5]]}, {'name': 'camodeling', 'visible': false, 'data': [[Date.UTC(2020, 1, 25), 5.0], [Date.UTC(2020, 2, 2), 4.5], [Date.UTC(2020, 2, 9), 4.0], [Date.UTC(2020, 2, 23), 3.3333333333333335]]}, {'name': 'interpretresults', 'visible': false, 'data': [[Date.UTC(2020, 1, 18), 4.0], [Date.UTC(2020, 2, 19), 4.0], [Date.UTC(2020, 2, 27), 3.888888888888889], [Date.UTC(2020, 3, 2), 3.1333333333333333], [Date.UTC(2020, 3, 8), 3.125], [Date.UTC(2020, 3, 14), 3.1176470588235294], [Date.UTC(2020, 4, 1), 3.0869565217391304], [Date.UTC(2020, 4, 5), 3.2758620689655173]]}, {'name': 'mcmodeling', 'visible': false, 'data': [[Date.UTC(2020, 3, 21), 2.0], [Date.UTC(2020, 3, 26), 2.0], [Date.UTC(2020, 3, 28), 2.3333333333333335], [Date.UTC(2020, 3, 30), 2.75], [Date.UTC(2020, 4, 4), 2.8], [Date.UTC(2020, 4, 11), 2.8333333333333335]]}, {'name': 'networkanalysis', 'visible': true, 'data': [[Date.UTC(2020, 2, 13), 1.0], [Date.UTC(2020, 4, 1), 4.428571428571429], [Date.UTC(2020, 4, 10), 3.769230769230769]]}, {'name': 'networkmodeling', 'visible': true, 'data': [[Date.UTC(2020, 2, 7), 4.0], [Date.UTC(2020, 2, 27), 4.0], [Date.UTC(2020, 3, 23), 4.0], [Date.UTC(2020, 4, 4), 4.428571428571429]]}, {'name': 'professionalism', 'visible': false, 'data': [[Date.UTC(2020, 1, 22), 4.0], [Date.UTC(2020, 2, 17), 4.0], [Date.UTC(2020, 4, 4), 3.5714285714285716]]}, {'name': 'pythonimplementation', 'visible': false, 'data': [[Date.UTC(2020, 1, 5), 3.0], [Date.UTC(2020, 1, 6), 2.5], [Date.UTC(2020, 1, 11), 2.75], [Date.UTC(2020, 2, 13), 2.9], [Date.UTC(2020, 2, 20), 3.090909090909091], [Date.UTC(2020, 2, 21), 2.7058823529411766], [Date.UTC(2020, 3, 6), 2.8333333333333335], [Date.UTC(2020, 4, 6), 2.875], [Date.UTC(2020, 4, 20), 3.1]]}];
+                           var credits = {
+               enabled: false
+            };
+
+            
+            var json = {};
+            json.chart = chart;
+            json.title = title;
+            json.subtitle = subtitle;
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.credits = credits;
+            $('#container_lo_evoStudent_4').highcharts(json);
+         });
+      </script>
+               </li>
+           
+               <li>
+      <div class = "GridMap" id = "container_lo_evoStudent_5" ></div>
+      <script language = "JavaScript">
+         $(document).ready(function() {  
+            var chart = {
+               type: 'line',
+                height: 600
+            }; 
+            var title = {
+               text: 'Evolution of Average LO Score'   
+            };
+            var subtitle = {
+               text: 'for Student_5'
+            };
+            var xAxis = {
+               type: 'datetime',
+               title: {
+                  text: 'Date'
+               }
+            };
+            var yAxis = {
+               min: 0,
+                max:5
+            };
+            var tooltip = {
+               headerFormat: '<b>{series.name}</b><br>',
+               pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+            };
+            var plotOptions = {
+               spline: {
+                  marker: {
+                     enabled: true
+                  }
+               }
+            };
+             var series = [{'name': 'caanalysis', 'visible': false, 'data': [[Date.UTC(2020, 1, 19), 4.0], [Date.UTC(2020, 1, 27), 3.5]]}, {'name': 'camodeling', 'visible': false, 'data': [[Date.UTC(2020, 1, 17), 4.0], [Date.UTC(2020, 1, 20), 4.0], [Date.UTC(2020, 2, 16), 4.75], [Date.UTC(2020, 3, 4), 4.428571428571429]]}, {'name': 'interpretresults', 'visible': false, 'data': [[Date.UTC(2020, 1, 20), 2.0], [Date.UTC(2020, 2, 21), 4.111111111111111], [Date.UTC(2020, 2, 23), 4.2], [Date.UTC(2020, 2, 26), 4.125], [Date.UTC(2020, 3, 11), 4.117647058823529], [Date.UTC(2020, 3, 30), 3.5652173913043477], [Date.UTC(2020, 4, 3), 3.8620689655172415]]}, {'name': 'mcmodeling', 'visible': false, 'data': [[Date.UTC(2020, 3, 5), 4.0], [Date.UTC(2020, 3, 14), 3.5], [Date.UTC(2020, 3, 16), 3.6666666666666665], [Date.UTC(2020, 3, 26), 3.75], [Date.UTC(2020, 4, 1), 3.6], [Date.UTC(2020, 4, 6), 3.8333333333333335]]}, {'name': 'networkanalysis', 'visible': true, 'data': [[Date.UTC(2020, 2, 28), 4.0], [Date.UTC(2020, 4, 6), 4.857142857142857], [Date.UTC(2020, 4, 9), 3.5384615384615383], [Date.UTC(2020, 4, 12), 3.6842105263157894], [Date.UTC(2020, 4, 21), 3.76]]}, {'name': 'networkmodeling', 'visible': true, 'data': [[Date.UTC(2020, 1, 28), 5.0], [Date.UTC(2020, 2, 4), 4.5], [Date.UTC(2020, 2, 12), 3.6666666666666665], [Date.UTC(2020, 3, 3), 3.5], [Date.UTC(2020, 3, 20), 3.8], [Date.UTC(2020, 4, 4), 4.25], [Date.UTC(2020, 4, 9), 3.6363636363636362], [Date.UTC(2020, 4, 23), 3.7142857142857144]]}, {'name': 'professionalism', 'visible': false, 'data': [[Date.UTC(2020, 1, 12), 2.0], [Date.UTC(2020, 2, 6), 2.75], [Date.UTC(2020, 3, 28), 3.7142857142857144]]}, {'name': 'pythonimplementation', 'visible': false, 'data': [[Date.UTC(2020, 1, 1), 3.0], [Date.UTC(2020, 1, 7), 4.0], [Date.UTC(2020, 1, 26), 3.0], [Date.UTC(2020, 2, 16), 1.8], [Date.UTC(2020, 2, 20), 1.875], [Date.UTC(2020, 3, 10), 2.0], [Date.UTC(2020, 3, 16), 2.5217391304347827], [Date.UTC(2020, 4, 20), 2.8275862068965516]]}];
+                           var credits = {
+               enabled: false
+            };
+
+            
+            var json = {};
+            json.chart = chart;
+            json.title = title;
+            json.subtitle = subtitle;
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.credits = credits;
+            $('#container_lo_evoStudent_5').highcharts(json);
+         });
+      </script>
+               </li>
+           
+           </ul>
+       </div>
+       </div>
+<!--
+   </body>
+   
+</html>-->
