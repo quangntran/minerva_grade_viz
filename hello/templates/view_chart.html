@@ -2,24 +2,7 @@
 {% load static %}
 
 {% block content %}
-<!--
-<html>
-   <head>
-      <title>Highcharts Tutorial</title>
-      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-      </script>
-      <script src = "https://code.highcharts.com/highcharts.js"></script>  
-       <script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-         {% load static %}
-       <script src="{% static 'js/exporting.js' %}"></script>   
-       <script src="{% static 'js/highcharts-more.js' %}"></script>   
-       <link rel="stylesheet" type="text/css" href="{% static 'style-chart.css' %}">
-       <link rel="stylesheet" type="text/css" href="{% static 'style-tab.css' %}">
-   </head>
--->
-   
-<!--   <body>-->
+
        <div class="tab">
            <button class="tablinks active" onclick="openCity(event, 'LO_contribution')">LO Contribution</button>
            <button class="tablinks" onclick="openCity(event, 'LO_evolution')">LO Evolution</button>
@@ -50,6 +33,9 @@
                </script>
        <div id="LO_contribution" class="tabcontent" style="display:block">
            <div id="container_LO_contrib" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+           <p>How much does a particular LO contribute towards the overall course grades? This could help us see if there is any particular LO that weigh disporportionately in a student’s course grade.</p>
+           <p>Formula for the contribution of a LO:</p>
+           <p><MATH>\frac{1}{2}</MATH></p>
       <script language = "JavaScript">
         $(document).ready(function() {  
             var chart = {
@@ -182,7 +168,7 @@
                type: 'bar'
             };
             var title = {
-               text: 'Average LO Scores'   
+               text: 'LO Contributions'   
             };
             var subtitle = {
                text: 'for {{ student.student_name|safe }}'  
@@ -730,9 +716,5 @@
            </ul>
        </div>
        </div>
-<!--
-   </body>
-   
-</html>
--->
+
 {% endblock %}
