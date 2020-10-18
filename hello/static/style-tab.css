@@ -71,3 +71,8 @@ textarea {
 input[type="text"] {
   width: 70%;
 }
+
+.tabcontentdemo p {
+    color: black;
+    text-align: left;
+}
