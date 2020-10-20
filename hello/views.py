@@ -41,6 +41,8 @@ def index(request):
     else:   
         form = GradeForm()
         return render(request, "index.html", {'form': form})
+def about(request):
+    return render(request, "about.html")
 
 def view_teapot(request):
     context = {'data': [
@@ -105,3 +107,4 @@ def upload(request):
     else:
         form = GradeForm()
     return render(request, 'upload.html', {'form': form})
+

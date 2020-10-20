@@ -1,88 +1,5 @@
-<!--
-<!DOCTYPE html>
-<html>
-<head>
-<title>Python Getting Started on Heroku</title>
-  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-   </script>
-  <script src = "https://code.highcharts.com/highcharts.js"></script>
-    
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
--->
-    
-
-<!--      <script src = "https://code.highcharts.com/highcharts.js"></script>  -->
-<!--       <script src="http://code.highcharts.com/modules/exporting.js"></script>-->
-<!--        <script src="http://code.highcharts.com/highcharts-more.js"></script>-->
-       
-
-<!--
-       <script src="/static/js/exporting.js"></script>   
-       <script src="/static/js/highcharts-more.js"></script>   
-       <link rel="stylesheet" type="text/css" href="/static/style-chart.css">
-       <link rel="stylesheet" type="text/css" href="/static/style-tab.css">
--->
-<!--
-  <style type="text/css">
-    .jumbotron {
-        background: #532f8c;
-        color: white;
-        padding-bottom: 80px
-    }
-    .jumbotron .btn-primary {
-        background: #845ac7;
-        border-color: #845ac7
-    }
-    .jumbotron .btn-primary:hover {
-        background: #7646c1
-    }
-    .jumbotron p {
-        color: #d9ccee;
-        max-width: 75%;
-        margin: 1em auto 2em
-    }
-    .navbar+.jumbotron {
-        margin-top: -20px
-    }
-    .jumbotron .lang-logo {
-        display: block;
-        background: #b01302;
-        border-radius: 50%;
-        overflow: hidden;
-        width: 100px;
-        height: 100px;
-        margin: auto;
-        border: 2px solid white
-    }
-    .jumbotron .lang-logo img {
-        max-width: 100%
-    }
 
 
-<!--
-<html>
-   <head>
-      <title>Highcharts Tutorial</title>
-      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-      </script>
-      <script src = "https://code.highcharts.com/highcharts.js"></script>  
-       <script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-         
-       <script src="/static/js/exporting.js"></script>   
-       <script src="/static/js/highcharts-more.js"></script>   
-       <link rel="stylesheet" type="text/css" href="/static/style-chart.css">
-       <link rel="stylesheet" type="text/css" href="/static/style-tab.css">
-   </head>
--->
-   
-<!--   <body>-->
        <div class="tab">
            <button class="tablinks active" onclick="openCity(event, 'LO_contribution')">LO Contribution</button>
            <button class="tablinks" onclick="openCity(event, 'LO_evolution')">LO Evolution</button>
@@ -113,10 +30,10 @@
                </script>
        <div id="LO_contribution" class="tabcontent" style="display:block">
            <p>How much does a particular LO contribute towards the overall course grades? This could help us see if there is any particular LO that weigh disporportionately in a student’s course grade.</p>
-           <p>Formula for the contribution of a LO:\[LO Contribution = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]</p>
-           <p>When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]</p>
+           <p>Formula for the contribution of a LO:\[\text{LO contribution} = \alpha {\text{weighted sum of this LO's grades} \over \text{total weights for the CO this LO belongs to}}.\]</p>
+           <p>where \(\alpha\) is the normalizing factor and \[\alpha =  {1 \over \text{number of this course's COs} \times \text{overall course average}}.\]</p>
            <div id="container_LO_contrib" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+           
       <script language = "JavaScript">
         $(document).ready(function() {  
             var chart = {
@@ -2497,14 +2414,6 @@
            </ul>
        </div>
        </div>
-<!--
-   </body>
-   
-</html>
--->
 
-<!--
 
-</body>
-</html>
--->
+

@@ -23,6 +23,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("view_teapot/", hello.views.view_teapot, name="view_teapot"),
     path("upload/", hello.views.upload, name="upload"),
+    path("about/", hello.views.about, name="about")
 ]
 
 if settings.DEBUG:
